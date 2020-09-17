@@ -19,6 +19,23 @@ const person = (request, response) => {
 }
 
 
+const addperson = (request, response) => {
+    const { name, email, password } = request.body
+
+    pool.query(
+        'INSERT INTO public."user" (name, email, password) VALUES ($1, $2, $3)', [name, email, password],
+        (error) => {
+            if (error) {
+                throw error
+            }
+            response.status(201).json({ status: 'success', message: 'Book added.' })
+        },
+    )
+}
+
+
+
+
 const PORT = process.env.PORT || 4000;
 
 
@@ -28,9 +45,9 @@ app
     // GET endpoint
     .get(person)
     // POST endpoint
-    //.post(addBook)
+    .post(addperson)
 
-// require('./routes/routes')(app);
+//require('./routes/routes')(app);
 
 app.listen(PORT, () => {
     console.log(`Server is listening on port ${PORT}`)
