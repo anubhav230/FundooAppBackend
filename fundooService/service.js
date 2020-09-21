@@ -39,10 +39,10 @@ module.exports = class UserService {
                             email: user.dataValues.email
                         }
                         console.log(process.env.JWT_KEY)
-                        const tokan = jwt.sign(mail, process.env.JWT_KEY, { expiresIn: 1440 })
-                        User.logintoken(tokan, email)
+                        const token = jwt.sign(mail, process.env.JWT_KEY, { expiresIn: 1440 })
+                        User.logintoken(token, email)
                             .then(() => {
-                                resolve(tokan)
+                                resolve(token)
                             })
                             .catch(error => {
                                 reject(error)
@@ -58,28 +58,25 @@ module.exports = class UserService {
         })
     }
 
+    /**
+     * @Description : for sending link on user mail to reset password
+     * @param {email} email 
+     */
     forgotPassword(email) {
-        console.log('/////////////service')
         return new Promise((resolve, reject) => {
-            console.log('/////////////forgotPassword1')
             User.findEmail(email)
                 .then(user => {
                     const mail = {
                         email: user.dataValues.email
                     }
                     console.log(mail)
-                    const tokan2 = jwt.sign(mail, process.env.JWT_KEY, { expiresIn: 1440 })
-                    console.log('/////////////forgotPassword2')
-                    console.log(tokan2)
-                    mailer.mailer(email, tokan2)
-                        .then(() => {
-                            console.log('///////////succes')
-                            resolve(tokan2)
-                        }).catch(err => {
-                            reject(err)
-                        });
+                    const token = jwt.sign(mail, process.env.JWT_KEY, { expiresIn: 1440 })
+                    console.log(token)
+                    mailer.mailer(email, token)
+                    resolve(token)
                 }).catch(err => {
-                    console.log('///////////error')
+                    console.log('error')
+                    console.log(err)
                     reject(err)
                 })
         });

@@ -19,9 +19,7 @@ module.exports = class fundooController {
             'message': 'Something bad happend',
             'success': false
         }
-        let message = ""
         try {
-
             if (typeof req.body.firstName === 'undefined') {
                 response.message = "firstName is mendetory"
                 console.log(response)
@@ -114,7 +112,11 @@ module.exports = class fundooController {
 
     }
 
-
+    /**
+     * @Description : forgot password to send link on mail to give a new password 
+     * @param {object} req 
+     * @param {object} res 
+     */
     forgotPassword(req, res) {
         var response = {
             'success': false,
@@ -127,17 +129,20 @@ module.exports = class fundooController {
                 res.json({ message: 'mail not found user does\'t exist' });
                 throw new Error('undefined email')
             }
-            userService.forgotPassword(mail).then(() => {
-                response.message = 'Successfully Sent';
-                response.success = true;
-                res.status(200).send(response);
-            }).catch(err => {
-                response.message = 'reseting password failed Enter the correct credentials';
-                res.status(400).send(response)
-            })
-
+            userService.forgotPassword(mail)
+                .then(result => {
+                    response.message = 'mail Successfully Sent';
+                    response.success = true;
+                    response.data = {
+                        'token': result
+                    }
+                    res.status(200).send(response);
+                }).catch(err => {
+                    response.message = 'reseting password failed Enter the correct credentials';
+                    res.status(400).send(response)
+                })
         } catch (error) {
-
+            res.send(response, error);
         }
     }
 }
