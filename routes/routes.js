@@ -1,5 +1,5 @@
 const fundoocontroller = require('../controller/fundooController')
-
+const { check } = require('express-validator');
 const controller = new fundoocontroller();
 
 /**
@@ -7,6 +7,7 @@ const controller = new fundoocontroller();
  * @param {function} app http requests 
  */
 module.exports = (app) => {
-    app.post('/register', controller.register);
+    app.post('/register', [check('firstName', 'firstName is required').isEmpty()], controller.register);
     app.post('/login', controller.login);
+    app.post('/forgotPassword', controller.forgotPassword);
 }
