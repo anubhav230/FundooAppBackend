@@ -10,4 +10,6 @@ module.exports = (app) => {
     app.post('/register', [check('firstName', 'firstName is required').isEmpty()], controller.register);
     app.post('/login', controller.login);
     app.post('/forgotPassword', controller.forgotPassword);
+    app.put('/resetPassword', controller.resetPassword);
+
 }

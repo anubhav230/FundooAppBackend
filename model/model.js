@@ -3,13 +3,7 @@ const sequelize = require('sequelize');
 const db = require('../dbConfig/dbConfig')
 
 module.exports.userModel = db.sequelize.define('user', {
-    id: {
-        type: sequelize.INTEGER,
-        allowNull: false,
-        primaryKey: true,
-        autoIncriment: true
 
-    },
     firstName: {
         type: sequelize.STRING,
         allowNull: false
@@ -66,4 +60,8 @@ module.exports.findEmail = (email) => {
  */
 module.exports.logintoken = (logintoken, email) => {
     return this.userModel.update({ logintoken: logintoken }, { where: { email: email } })
+}
+
+module.exports.resetPasseord = (password, logintoken) => {
+    return this.userModel.update({ password: password }, { where: { logintoken: logintoken } })
 }

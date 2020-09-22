@@ -13,7 +13,7 @@ module.exports.mailer = (email, token) => {
             from: 'dulce.ankunding@ethereal.email', // sender address
             to: email, // list of receivers
             subject: "Password Reset", // Subject line
-            text: "Please copy the following link, to reset your password" + token
+            text: "Please copy the following link, to reset your password: " + token
         }
         // send mail with defined transport object
     transporter.sendMail(mailOption, (error, info) => {

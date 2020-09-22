@@ -138,11 +138,45 @@ module.exports = class fundooController {
                     }
                     res.status(200).send(response);
                 }).catch(err => {
-                    response.message = 'reseting password failed Enter the correct credentials';
+                    response.message = 'reseting password failed Enter the correct credentials' + err;
                     res.status(400).send(response)
                 })
         } catch (error) {
             res.send(response, error);
         }
+    }
+
+
+    resetPassword(req, res) {
+        var response = {
+            'success': false,
+            'message': 'Something bad happend'
+        };
+        try {
+            if (typeof req.body.token === 'undefined') {
+                res.json({ message: 'please enter token' });
+                throw new Error('undefined email')
+            }
+            let newPassword = req.body.password
+            const { token } = req.body
+            if (token) {
+                userService.resetPassword(newPassword, token)
+                    .then(() => {
+                        response.message = 'passwored Successfully changed';
+                        response.success = true;
+                        res.status(200).send(response)
+                    }).catch(err => {
+                        response.message = 'reseting password failed Enter the correct credentials' + err;
+                        res.status(400).send(response)
+                    })
+            } else {
+                response.message = 'please inter toker';
+                res.status(400).send(response)
+            }
+        } catch (error) {
+            response.message = 'reseting password failed Enter the correct credentials';
+            res.status(400).send(response)
+        }
+
     }
 }

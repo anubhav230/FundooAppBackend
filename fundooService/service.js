@@ -72,13 +72,37 @@ module.exports = class UserService {
                     console.log(mail)
                     const token = jwt.sign(mail, process.env.JWT_KEY, { expiresIn: 1440 })
                     console.log(token)
-                    mailer.mailer(email, token)
-                    resolve(token)
+                    User.logintoken(token, email)
+                        .then(() => {
+                            mailer.mailer(email, token)
+                            resolve(token)
+                        }).catch(err => {
+                            reject(err)
+                        })
                 }).catch(err => {
                     console.log('error')
                     console.log(err)
                     reject(err)
                 })
+        });
+    }
+
+    resetPassword(password, token) {
+        return new Promise((resolve, reject) => {
+            jwt.verify(token, process.env.JWT_KEY, function(err, decoded) {
+                if (err) {
+                    reject(err)
+                }
+                const hash = bcrypt.hashSync(password, 10)
+                password = hash
+                User.resetPasseord(password, token)
+                    .then(() => {
+                        resolve('success')
+                    })
+                    .catch(err => {
+                        reject(err)
+                    })
+            })
         });
     }
 }
