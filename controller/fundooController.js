@@ -11,7 +11,6 @@ module.exports = class fundooController {
      * @param {object} res 
      */
     register(req, res) {
-
         check('email').isEmail()
         check('password', 'password is not valid').isLength({ min: 8 });
 
@@ -78,12 +77,10 @@ module.exports = class fundooController {
             'message': 'Something bad happend'
         };
         try {
-
             if (typeof req.body.email === 'undefined') {
                 res.json({ message: 'Mail not found user does\'t exist' });
                 throw new Error('undefined email')
             }
-
             if (typeof req.body.password === 'undefined') {
                 res.json({ message: 'undefined passwordt' });
                 throw new Error('undefined password')
@@ -106,7 +103,6 @@ module.exports = class fundooController {
         } catch (error) {
             res.send({ message: "Login failed. Enter the correct credentials" });
         }
-
     }
 
     /**
@@ -179,6 +175,32 @@ module.exports = class fundooController {
 
 
     mailverify(req, res) {
-
+        var response = {
+            'success': false,
+            'message': 'Something bad happend'
+        };
+        try {
+            let email = req.body.email;
+            if (typeof req.body.email === 'undefined') {
+                res.json({ message: 'mail not found user does\'t exist' });
+                throw new Error('undefined email')
+            }
+            userService.emailToken(email)
+                .then(result => {
+                    response.message = 'mail Successfully Sent';
+                    response.success = true;
+                    response.data = {
+                        'token': result
+                    }
+                    res.status(200).send(response);
+                })
+                .catch(err => {
+                    response.message = 'reseting password failed Enter the correct credentials' + err;
+                    res.status(400).send(response)
+                })
+        } catch (error) {
+            res.send(response, error);
+        }
     }
+
 }

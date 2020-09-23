@@ -21,10 +21,9 @@ module.exports.mailer = (email, token) => {
     let mailOption = {
             from: process.env.MAIL, // sender address
             to: email, // list of receivers
-            subject: "Password Reset", // Subject line
-            html: link + 'You are receiving this because you  have requested the reset of the password for your account.\n\n' +
+            subject: "nodemailer", // Subject line
+            html: link + '\nYou are receiving this because you  have requested the reset of the password for your account.\n\n' +
                 'Please click on the following link, or paste this into your browser to complete the process:\n\n'
-
         }
         // send mail with defined transport object
     transporter.sendMail(mailOption, (error, info) => {

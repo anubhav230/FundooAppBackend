@@ -4,7 +4,6 @@ const jwt = require('jsonwebtoken')
 const mailer = require('../fundooService/node_mailer')
 
 module.exports = class UserService {
-
     /**
      * @Description : registering a new user and saving details in database
      * @param {userData} userData 
@@ -111,4 +110,29 @@ module.exports = class UserService {
             })
         });
     }
+
+    emailToken(email) {
+        return new Promise((resolve, reject) => {
+            User.findEmail(email)
+                .then(user => {
+                    const mail = {
+                        email: user.dataValues.email
+                    }
+                    const token = jwt.sign(mail, process.env.JWT_KEY, { expiresIn: 1440 })
+                    console.log(token)
+                    User.verificationToken(token, email)
+                        .then(() => {
+                            mailer.mailer(email, token)
+                            resolve(token)
+                        }).catch(err => {
+                            reject(err)
+                        })
+                }).catch(err => {
+                    console.log('error')
+                    console.log(err)
+                    reject(err)
+                })
+        });
+    }
+
 }

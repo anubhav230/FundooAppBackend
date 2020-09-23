@@ -20,9 +20,12 @@ module.exports.userModel = db.sequelize.define('user', {
         type: sequelize.STRING,
         allowNull: false
     },
-    logintoken: {
+    passToken: {
         type: sequelize.STRING
     },
+    verificationToken: {
+        type: sequelize.STRING
+    }
 
 });
 
@@ -56,15 +59,29 @@ module.exports.findEmail = (email) => {
     });
 }
 
+// module.exports.findToken = (email) => {
+//     return this.userModel.findOne({ //findOne method of sequelize package
+//         where: {
+//             email: email
+//         }
+//     }).then(res => {
+//         return res;
+//     });
+// }
+
 /**
  * @Description : for updating JWT tokan in database whenever user trying to login 
  * @param {logintoken} logintoken 
  * @param {email} email 
  */
-module.exports.logintoken = (logintoken, email) => {
-    return this.userModel.update({ logintoken: logintoken }, { where: { email: email } })
+module.exports.logintoken = (passToken, email) => {
+    return this.userModel.update({ passToken: passToken }, { where: { email: email } })
 }
 
-module.exports.resetPasseord = (password, logintoken) => {
-    return this.userModel.update({ password: password }, { where: { logintoken: logintoken } })
+module.exports.verificationToken = (verificationToken, email) => {
+    return this.userModel.update({ verificationToken: verificationToken }, { where: { email: email } })
+}
+
+module.exports.resetPasseord = (password, passToken) => {
+    return this.userModel.update({ password: password }, { where: { passToken: passToken } })
 }
