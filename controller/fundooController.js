@@ -15,7 +15,7 @@ module.exports = class fundooController {
         check('email').isEmail()
         check('password', 'password is not valid').isLength({ min: 8 });
 
-        let response = {
+        var response = {
             'message': 'Something bad happend',
             'success': false
         }
@@ -46,7 +46,6 @@ module.exports = class fundooController {
                 email: req.body.email,
                 password: req.body.password,
             }
-
             if (!errors.isEmpty()) {
                 userService.registration(data).then(() => {
                     res.message = 'Successfully registered';
@@ -102,11 +101,9 @@ module.exports = class fundooController {
                 })
                 .catch(err => {
                     response.message = 'Login failed. Enter the correct credentials';
-                    res.status(400).send(response, err);
-                })
-
+                    res.status(400).send(response);
+                });
         } catch (error) {
-            //response.message = 'Login failed. Enter the correct credentials';
             res.send({ message: "Login failed. Enter the correct credentials" });
         }
 
@@ -177,6 +174,11 @@ module.exports = class fundooController {
             response.message = 'reseting password failed Enter the correct credentials';
             res.status(400).send(response)
         }
+
+    }
+
+
+    mailverify(req, res) {
 
     }
 }

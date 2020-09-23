@@ -22,7 +22,8 @@ module.exports.userModel = db.sequelize.define('user', {
     },
     logintoken: {
         type: sequelize.STRING
-    }
+    },
+
 });
 
 /**
@@ -50,6 +51,8 @@ module.exports.findEmail = (email) => {
         where: {
             email: email
         }
+    }).then(res => {
+        return res;
     });
 }
 

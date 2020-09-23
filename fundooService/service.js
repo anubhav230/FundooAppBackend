@@ -15,13 +15,14 @@ module.exports = class UserService {
             userData.password = hash
             User.createUser(userData).then(data => {
                 if (data) {
-                    resolve("Successfull......")
+                    resolve(data)
                 } else {
                     reject("Sorry Unable to register")
                 }
-            })
-
-        })
+            }).catch(err => {
+                reject(err)
+            });
+        });
     }
 
     /**
@@ -49,7 +50,7 @@ module.exports = class UserService {
                             })
                     } else {
                         console.log
-                        reject({ error: "Wrong password" })
+                        reject({ error: "Wrong Credentials" })
                     }
                 })
                 .catch(err => {
@@ -87,6 +88,11 @@ module.exports = class UserService {
         });
     }
 
+    /**
+     * 
+     * @param {password} password 
+     * @param {token} token 
+     */
     resetPassword(password, token) {
         return new Promise((resolve, reject) => {
             jwt.verify(token, process.env.JWT_KEY, function(err, decoded) {
