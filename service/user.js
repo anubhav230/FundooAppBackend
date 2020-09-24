@@ -1,7 +1,7 @@
-const User = require("../model/model")
+const User = require("../model/userModel")
 const bcrypt = require("bcrypt")
 const jwt = require('jsonwebtoken')
-const mailer = require('../fundooService/node_mailer')
+const mailer = require('./node_mailer')
 
 module.exports = class UserService {
     /**
@@ -11,7 +11,8 @@ module.exports = class UserService {
     registration(userData) {
         return new Promise((resolve, reject) => {
             let email = userData.email;
-            const hash = bcrypt.hashSync(userData.password, 10)
+            let flag = 'registration'
+            const hash = User.hashPassword(userData.password)
             userData.password = hash
             const mail = {
                 email: userData.email
@@ -19,7 +20,7 @@ module.exports = class UserService {
             const token = jwt.sign(mail, process.env.JWT_KEY, { expiresIn: 1440 })
             User.createUser(userData).then(data => {
                 if (data) {
-                    mailer.mailer(email, token)
+                    mailer.mailer(email, token, flag)
                     resolve(data)
                 } else {
                     reject("Sorry Unable to register")
@@ -47,7 +48,7 @@ module.exports = class UserService {
                                 email: user.dataValues.email
                             }
                             const token = jwt.sign(mail, process.env.JWT_KEY, { expiresIn: 1440 })
-                            User.logintoken(token, email)
+                            User.login(token, email)
                                 .then(() => {
                                     resolve(token)
                                 })
@@ -70,6 +71,29 @@ module.exports = class UserService {
 
     /**
      * 
+     * @param {email} email 
+     */
+    forgotPassword(email) {
+        return new Promise((resolve, reject) => {
+            let flag = 'forgotPassword'
+            User.findEmail(email)
+                .then(user => {
+                    const mail = {
+                        email: user.dataValues.email
+                    }
+                    console.log(mail)
+                    const tokan = jwt.sign(mail, process.env.JWT_KEY, { expiresIn: 1440 })
+                    console.log(tokan)
+                    mailer.mailer(email, tokan, flag)
+                    resolve(tokan)
+                }).catch(err => {
+                    reject(err)
+                })
+        });
+    }
+
+    /**
+     * 
      * @param {password} password 
      * @param {token} token 
      */
@@ -79,7 +103,7 @@ module.exports = class UserService {
                 if (err) {
                     reject(err)
                 }
-                const hash = bcrypt.hashSync(password, 10)
+                const hash = User.hashPassword(password)
                 password = hash
                 User.resetPasseord(password, token)
                     .then(() => {
@@ -92,6 +116,10 @@ module.exports = class UserService {
         });
     }
 
+    /**
+     * @Description : for sending token to user for email verification
+     * @param {email} token 
+     */
     emailToken(email) {
         return new Promise((resolve, reject) => {
             User.findEmail(email)
@@ -116,6 +144,11 @@ module.exports = class UserService {
         });
     }
 
+    /**
+     *  @Description : verify user's email AC
+     * @param {token} token 
+     * @param {email} email 
+     */
     verify(token, email) {
         return new Promise((resolve, reject) => {
             jwt.verify(token, process.env.JWT_KEY, function(err, decoded) {

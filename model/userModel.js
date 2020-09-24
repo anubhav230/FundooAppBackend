@@ -1,6 +1,7 @@
 const { Cipher } = require('crypto');
 const sequelize = require('sequelize');
 const db = require('../dbConfig/dbConfig')
+const bcrypt = require("bcrypt")
 
 module.exports.userModel = db.sequelize.define('user', {
 
@@ -52,31 +53,20 @@ module.exports.createUser = (userData) => {
  * @param {email} email 
  */
 module.exports.findEmail = (email) => {
-    return this.userModel.findOne({ //findOne method of sequelize package
-        where: {
-            email: email
-        }
-    }).then(res => {
-        return res;
-    });
-}
-
-// module.exports.findToken = (email) => {
-//     return this.userModel.findOne({ //findOne method of sequelize package
-//         where: {
-//             email: email
-//         }
-//     }).then(res => {
-//         return res;
-//     });
-// }
-
-/**
- * @Description : for updating JWT tokan in database whenever user trying to login 
- * @param {logintoken} logintoken 
- * @param {email} email 
- */
-module.exports.logintoken = (passToken, email) => {
+        return this.userModel.findOne({ //findOne method of sequelize package
+            where: {
+                email: email
+            }
+        }).then(res => {
+            return res;
+        });
+    }
+    /**
+     * @Description : for updating JWT tokan in database whenever user trying to login 
+     * @param {logintoken} logintoken 
+     * @param {email} email 
+     */
+module.exports.login = (passToken, email) => { //
     return this.userModel.update({ passToken: passToken }, { where: { email: email } })
 }
 
@@ -104,4 +94,12 @@ module.exports.mailVerification = (email) => {
  */
 module.exports.resetPasseord = (password, passToken) => {
     return this.userModel.update({ password: password }, { where: { passToken: passToken } })
+}
+
+/**
+ * @Description : password hashing 
+ * @param {password} password
+ */
+module.exports.hashPassword = (password) => {
+    return bcrypt.hashSync(password, 10)
 }

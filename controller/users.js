@@ -1,5 +1,5 @@
 const { pool } = require('../dbConfig/dbConfig')
-const user = require('../fundooService/service')
+const user = require('../service/user')
 const { check, validationResult } = require('express-validator');
 
 const userService = new user();
@@ -97,7 +97,7 @@ module.exports = class fundooController {
                     res.status(200).send(response);
                 })
                 .catch(err => {
-                    response.message = 'Login failed. Enter the correct credentials or email is not verifyed';
+                    response.message = 'Login failed. Enter the correct credentials or email is not verifyed' + err;
                     res.status(400).send(response);
                 });
         } catch (error) {
