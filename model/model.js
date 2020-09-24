@@ -80,17 +80,28 @@ module.exports.logintoken = (passToken, email) => {
     return this.userModel.update({ passToken: passToken }, { where: { email: email } })
 }
 
-
+/**
+ * @Description : for updating JWT tokan in database whenever user trying to verify email 
+ * @param {verificationToken} verificationToken 
+ * @param {email} email 
+ */
 module.exports.verificationToken = (verificationToken, email) => {
     return this.userModel.update({ verificationToken: verificationToken }, { where: { email: email } })
 }
 
-
+/**
+ * @Description : for removing  JWT tokan from database after user's AC is verified 
+ * @param {email} email 
+ */
 module.exports.mailVerification = (email) => {
     return this.userModel.update({ verifyed: true }, { where: { email: email } })
 }
 
-
+/**
+ * @Description : for resting password 
+ * @param {emapasswordil} password
+ * @param {passToken} passToken  
+ */
 module.exports.resetPasseord = (password, passToken) => {
     return this.userModel.update({ password: password }, { where: { passToken: passToken } })
 }

@@ -61,22 +61,6 @@ module.exports = class UserService {
                     } else {
                         eject({ error: "Wrong Credentials" })
                     }
-                    // if (bcrypt.compareSync(password, user.password)) {
-                    //     const mail = {
-                    //         email: user.dataValues.email
-                    //     }
-                    //     const token = jwt.sign(mail, process.env.JWT_KEY, { expiresIn: 1440 })
-                    //     User.logintoken(token, email)
-                    //         .then(() => {
-                    //             resolve(token)
-                    //         })
-                    //         .catch(error => {
-                    //             reject(error)
-                    //         })
-                    // } else {
-                    //     console.log
-                    //     reject({ error: "Wrong Credentials" })
-                    // }
                 })
                 .catch(err => {
                     reject(err)
@@ -108,31 +92,31 @@ module.exports = class UserService {
         });
     }
 
-    // emailToken(email) {
-    //     return new Promise((resolve, reject) => {
-    //         User.findEmail(email)
-    //             .then(user => {
-    //                 const mail = {
-    //                     email: user.dataValues.email
-    //                 }
-    //                 const token = jwt.sign(mail, process.env.JWT_KEY, { expiresIn: 1440 })
-    //                 console.log(token)
-    //                 User.verificationToken(token, email)
-    //                     .then(() => {
-    //                         mailer.mailer(email, token)
-    //                         resolve(token)
-    //                     }).catch(err => {
-    //                         reject(err)
-    //                     })
-    //             }).catch(err => {
-    //                 console.log('error')
-    //                 console.log(err)
-    //                 reject(err)
-    //             })
-    //     });
-    // }
+    emailToken(email) {
+        return new Promise((resolve, reject) => {
+            User.findEmail(email)
+                .then(user => {
+                    const mail = {
+                        email: user.dataValues.email
+                    }
+                    const token = jwt.sign(mail, process.env.JWT_KEY, { expiresIn: 1440 })
+                    console.log(token)
+                    User.verificationToken(token, email)
+                        .then(() => {
+                            mailer.mailer(email, token)
+                            resolve(token)
+                        }).catch(err => {
+                            reject(err)
+                        })
+                }).catch(err => {
+                    console.log('error')
+                    console.log(err)
+                    reject(err)
+                })
+        });
+    }
 
-    verifyToken(token, email) {
+    verify(token, email) {
         return new Promise((resolve, reject) => {
             jwt.verify(token, process.env.JWT_KEY, function(err, decoded) {
                 if (err) {
@@ -140,6 +124,8 @@ module.exports = class UserService {
                 } else {
                     User.mailVerification(email)
                         .then(() => {
+                            token = null
+                            User.verificationToken(token, email)
                             resolve('success')
                         })
                         .catch(err => {

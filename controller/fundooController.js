@@ -57,7 +57,7 @@ module.exports = class fundooController {
             } else {
                 console.log(errors)
                 response.message = "Prease Enter valid Credentials"
-                res.status(422).send(response)
+                res.status(401).send(response)
             }
         } catch (error) {
             res.send(response);
@@ -174,7 +174,7 @@ module.exports = class fundooController {
     }
 
 
-    mailverify(req, res) {
+    emailVerifyToken(req, res) {
         var response = {
             'success': false,
             'message': 'Something bad happend'
@@ -195,7 +195,7 @@ module.exports = class fundooController {
                     res.status(200).send(response);
                 })
                 .catch(err => {
-                    response.message = 'reseting password failed Enter the correct credentials' + err;
+                    response.message = 'reseting password failed Enter the correct credentials: ' + err;
                     res.status(400).send(response)
                 })
         } catch (error) {
@@ -203,7 +203,7 @@ module.exports = class fundooController {
         }
     }
 
-    emailTokenVerify(req, res) {
+    mailverify(req, res) {
         var response = {
             'success': false,
             'message': 'Something bad happend',
@@ -215,10 +215,9 @@ module.exports = class fundooController {
                 throw new Error('undefined email')
             }
             const { token } = req.body
-                //console.log(req.body.email)
             let email = req.body.email
             if (token) {
-                userService.verifyToken(token, email)
+                userService.verify(token, email)
                     .then(() => {
                         response.message = 'email verified';
                         response.success = true;

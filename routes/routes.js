@@ -11,6 +11,6 @@ module.exports = (app) => {
     app.post('/login', controller.login);
     app.post('/forgotPassword', controller.forgotPassword);
     app.put('/resetPassword', [check('password', 'min 6 char').isLength({ min: 6 })], controller.resetPassword);
-    app.post('/mailverify', controller.mailverify)
-    app.post('/verify', controller.emailTokenVerify)
+    app.post('/emailVerifyToken', controller.emailVerifyToken)
+    app.post('/verify', controller.mailverify)
 }
