@@ -9,5 +9,4 @@ const sequelize = new Sequelize('fundooApp', 'postgres', 'root', {
 
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
-
 module.exports = db;

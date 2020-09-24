@@ -62,8 +62,6 @@ module.exports = class fundooController {
         } catch (error) {
             res.send(response);
         }
-
-
     }
 
     /**
@@ -97,7 +95,7 @@ module.exports = class fundooController {
                     res.status(200).send(response);
                 })
                 .catch(err => {
-                    response.message = 'Login failed. Enter the correct credentials or email is not verifyed' + err;
+                    response.message = 'Login failed. Enter the correct credentials or please verify your email' + err;
                     res.status(400).send(response);
                 });
         } catch (error) {
@@ -139,7 +137,11 @@ module.exports = class fundooController {
         }
     }
 
-
+    /**
+     * @Description : reset password with token 
+     * @param {object} req 
+     * @param {object} res 
+     */
     resetPassword(req, res) {
         var response = {
             'success': false,
@@ -173,7 +175,11 @@ module.exports = class fundooController {
 
     }
 
-
+    /**
+     * @Description : sending token to users mail for mail verification 
+     * @param {object} req 
+     * @param {object} res 
+     */
     emailVerifyToken(req, res) {
         var response = {
             'success': false,
@@ -203,6 +209,11 @@ module.exports = class fundooController {
         }
     }
 
+    /**
+     * @Description : for mail verification   
+     * @param {object} req 
+     * @param {object} res 
+     */
     mailverify(req, res) {
         var response = {
             'success': false,
