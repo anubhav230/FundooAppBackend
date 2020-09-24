@@ -10,14 +10,8 @@ module.exports.mailer = (email, token) => {
             user: process.env.MAIL,
             pass: process.env.MAIL_PASS
         }
-        // host: 'smtp.mailtrap.io',
-        // port: 587,
-        // auth: {
-        //     user: '7dc1e9bca4f016', // generated ethereal user
-        //     pass: 'ae32e14d143892', // generated ethereal password
-        // },
     });
-    const link = `<ul><li>link: ${header}${token}</li></ul>`
+    const link = `<ul><a href = " ${header}${token}:  ">link</a></ul>`
     let mailOption = {
             from: process.env.MAIL, // sender address
             to: email, // list of receivers

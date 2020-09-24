@@ -45,7 +45,7 @@ module.exports = class fundooController {
                 email: req.body.email,
                 password: req.body.password,
             }
-            if (!errors.isEmpty()) {
+            if (errors.isEmpty()) {
                 userService.registration(data).then(() => {
                     res.message = 'Successfully registered';
                     res.success = true;
@@ -97,7 +97,7 @@ module.exports = class fundooController {
                     res.status(200).send(response);
                 })
                 .catch(err => {
-                    response.message = 'Login failed. Enter the correct credentials';
+                    response.message = 'Login failed. Enter the correct credentials or email is not verifyed';
                     res.status(400).send(response);
                 });
         } catch (error) {
@@ -203,4 +203,38 @@ module.exports = class fundooController {
         }
     }
 
+    emailTokenVerify(req, res) {
+        var response = {
+            'success': false,
+            'message': 'Something bad happend',
+            'emailFlag': false
+        };
+        try {
+            if (typeof req.body.token === 'undefined') {
+                res.json({ message: 'please enter token' });
+                throw new Error('undefined email')
+            }
+            const { token } = req.body
+                //console.log(req.body.email)
+            let email = req.body.email
+            if (token) {
+                userService.verifyToken(token, email)
+                    .then(() => {
+                        response.message = 'email verified';
+                        response.success = true;
+                        response.emailFlag = true;
+                        res.status(200).send(response)
+                    }).catch(err => {
+                        response.message = 'email not verified ' + err;
+                        res.status(400).send(response)
+                    })
+            } else {
+                response.message = 'please inter toker';
+                res.status(400).send(response)
+            }
+        } catch (error) {
+            response.message = 'email not verified';
+            res.status(400).send(response)
+        }
+    }
 }

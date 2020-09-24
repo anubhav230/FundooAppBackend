@@ -25,8 +25,10 @@ module.exports.userModel = db.sequelize.define('user', {
     },
     verificationToken: {
         type: sequelize.STRING
+    },
+    verifyed: {
+        type: sequelize.BOOLEAN
     }
-
 });
 
 /**
@@ -78,9 +80,16 @@ module.exports.logintoken = (passToken, email) => {
     return this.userModel.update({ passToken: passToken }, { where: { email: email } })
 }
 
+
 module.exports.verificationToken = (verificationToken, email) => {
     return this.userModel.update({ verificationToken: verificationToken }, { where: { email: email } })
 }
+
+
+module.exports.mailVerification = (email) => {
+    return this.userModel.update({ verifyed: true }, { where: { email: email } })
+}
+
 
 module.exports.resetPasseord = (password, passToken) => {
     return this.userModel.update({ password: password }, { where: { passToken: passToken } })
