@@ -11,7 +11,7 @@ module.exports.userModel = db.sequelize.define('notes', {
         type: sequelize.STRING,
         defaultValue: null
     },
-    is_pined: {
+    is_pinned: {
         type: sequelize.BOOLEAN,
         defaultValue: false
     },
@@ -33,8 +33,11 @@ module.exports.userModel = db.sequelize.define('notes', {
     }
 
 });
-
-module.exports.createUser = (userData) => {
+/**
+ * @description for saving note details in database
+ * @param {userData} userData 
+ */
+module.exports.createNote = (userData) => {
     return new Promise((resolve, reject) => {
         this.userModel.create(userData) //create method of sequelize
             .then(user => {

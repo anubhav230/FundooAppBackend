@@ -5,6 +5,11 @@ const noteService = new note();
 
 module.exports = class Note {
 
+    /**
+     * @description this will create new note for user
+     * @param {req} req 
+     * @param {res} res 
+     */
     createNote = (req, res) => {
         let response = {
             'message': 'Something bad happend',
@@ -15,7 +20,7 @@ module.exports = class Note {
             const noteData = {
                 title: req.body.title,
                 description: req.body.description,
-                is_pined: req.body.is_pined,
+                is_pinned: req.body.is_pined,
                 remainder: req.body.remainder,
                 noteColor: req.body.noteColor,
                 is_archived: req.body.is_archived,
@@ -35,6 +40,5 @@ module.exports = class Note {
             response.message = "Title and Content should not be empty" + error
             res.status(400).send(response);
         }
-
     }
 }
