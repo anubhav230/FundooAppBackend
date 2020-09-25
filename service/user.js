@@ -20,6 +20,7 @@ module.exports = class UserService {
             const token = jwt.sign(mail, process.env.JWT_KEY, { expiresIn: 1440 })
             User.createUser(userData).then(data => {
                 if (data) {
+                    console.log('////////////mailer')
                     mailer.mailer(email, token, flag)
                     resolve(data)
                 } else {
@@ -40,9 +41,9 @@ module.exports = class UserService {
         return new Promise((resolve, reject) => {
             User.findEmail(email)
                 .then(user => {
-                    let verifyed = user.dataValues.verifyed
-                    const usermail = user.dataValues.email
-                    if (verifyed) {
+                    let is_verified = user.dataValues.is_verified
+                    console.log(is_verified)
+                    if (is_verified) {
                         if (bcrypt.compareSync(password, user.password)) {
                             const mail = {
                                 email: user.dataValues.email

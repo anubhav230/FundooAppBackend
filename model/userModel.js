@@ -21,13 +21,13 @@ module.exports.userModel = db.sequelize.define('user', {
         type: sequelize.STRING,
         allowNull: false
     },
-    passToken: {
+    login_key: {
         type: sequelize.STRING
     },
     verificationToken: {
         type: sequelize.STRING
     },
-    verifyed: {
+    is_verified: {
         type: sequelize.BOOLEAN
     }
 });
@@ -66,8 +66,8 @@ module.exports.findEmail = (email) => {
      * @param {logintoken} logintoken 
      * @param {email} email 
      */
-module.exports.login = (passToken, email) => { //
-    return this.userModel.update({ passToken: passToken }, { where: { email: email } })
+module.exports.login = (login_key, email) => { //
+    return this.userModel.update({ login_key: login_key }, { where: { email: email } })
 }
 
 /**
@@ -84,7 +84,7 @@ module.exports.verificationToken = (verificationToken, email) => {
  * @param {email} email 
  */
 module.exports.mailVerification = (email) => {
-    return this.userModel.update({ verifyed: true }, { where: { email: email } })
+    return this.userModel.update({ is_verified: true }, { where: { email: email } })
 }
 
 /**
@@ -92,8 +92,8 @@ module.exports.mailVerification = (email) => {
  * @param {emapasswordil} password
  * @param {passToken} passToken  
  */
-module.exports.resetPasseord = (password, passToken) => {
-    return this.userModel.update({ password: password }, { where: { passToken: passToken } })
+module.exports.resetPasseord = (password, login_key) => {
+    return this.userModel.update({ password: password }, { where: { login_key: login_key } })
 }
 
 /**
@@ -102,4 +102,20 @@ module.exports.resetPasseord = (password, passToken) => {
  */
 module.exports.hashPassword = (password) => {
     return bcrypt.hashSync(password, 10)
+}
+
+module.exports.finduser = (login_key) => {
+    return new Promise((resolve, reject) => {
+        this.userModel.findOne({
+                where: {
+                    login_key: login_key
+                }
+            })
+            .then((data) => {
+                resolve(data.dataValues.id)
+            })
+            .catch((err) => {
+                reject(err)
+            })
+    })
 }

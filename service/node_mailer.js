@@ -2,7 +2,6 @@ const nodemailer = require("nodemailer");
 require('dotenv').config()
 
 module.exports.mailer = (email, token, flag) => {
-    let header = 'http//:localhost:4000/resetPassword/'
     let transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
@@ -11,6 +10,7 @@ module.exports.mailer = (email, token, flag) => {
         }
     });
     if (flag == 'registration') {
+        console.log('///////////////')
         const link = `<a href="http://localhost:4000/register/${token}">http://localhost:4000</a>`
         var mailOption = {
             from: process.env.MAIL,
