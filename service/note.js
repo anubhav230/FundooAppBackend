@@ -28,4 +28,26 @@ module.exports = class NoteService {
                 })
         });
     }
+
+    /**
+     * @description reading all notes
+     * @param {reqbody} reqbody 
+     */
+    readAllNote(reqbody) {
+        return new Promise((resolve, reject) => {
+            user.finduser(reqbody.login_key)
+                .then(id => {
+                    note.getAllNote(id)
+                        .then(data => {
+                            resolve(data)
+                        })
+                        .catch(err => {
+                            reject('error' + err)
+                        })
+                })
+                .catch(errr => {
+                    reject(errr)
+                })
+        });
+    }
 }

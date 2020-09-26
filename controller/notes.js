@@ -41,4 +41,32 @@ module.exports = class Note {
             res.status(400).send(response);
         }
     }
+
+    /**
+     * @description for reading all notes
+     * @param {req} req 
+     * @param {res} res 
+     */
+    readAllNote(req, res) {
+        let response = {
+            'message': 'Something bad happend',
+            'success': false
+        };
+        try {
+            noteService.readAllNote(req.body)
+                .then(data => {
+                    response.message = 'Successsfully read all note......';
+                    response.success = true;
+                    response.data = data
+                    res.status(200).send(response);
+                })
+                .catch(err => {
+                    response.message = 'Some issue in reading notes' + err;
+                    res.status(400).send(response);
+                })
+        } catch (error) {
+            response.message = "Some issue in reading notes" + error
+            res.status(400).send(response);
+        }
+    }
 }
