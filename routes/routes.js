@@ -20,4 +20,5 @@ module.exports = (app) => {
     /****routes for notes****/
     app.post('/create-note', noteController.createNote)
     app.post('/read-note', noteController.readAllNote)
+    app.put('/update-note', noteController.updateNote)
 }

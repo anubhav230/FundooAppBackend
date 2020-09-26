@@ -69,4 +69,36 @@ module.exports = class Note {
             res.status(400).send(response);
         }
     }
+
+    updateNote(req, res) {
+        let response = {
+            'message': 'Something bad happend',
+            'success': false
+        };
+        try {
+            // let notObj = {
+            //     title: req.body.title,
+            //     description: req.body.description,
+            //     is_pinned: req.body.is_pined,
+            //     remainder: req.body.remainder,
+            //     noteColor: req.body.noteColor,
+            //     is_archived: req.body.is_archived,
+            //     is_delete: req.body.is_delete,
+            // }
+            let notedata = req.body.description
+            let noteId = req.body.note_id
+            noteService.updateNote(notedata, noteId)
+                .then(() => {
+                    response.message = 'Successfully updated';
+                    response.success = true;
+                    res.status(200).send(response);
+                })
+                .catch(err => {
+                    response.message = 'updetion failed. ' + err;
+                    res.status(400).send(response);
+                })
+        } catch (error) {
+            res.send(response);
+        }
+    }
 }

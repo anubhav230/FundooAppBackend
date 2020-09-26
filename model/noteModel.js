@@ -32,6 +32,7 @@ module.exports.noteModel = db.sequelize.define('notes', {
         defaultValue: false
     }
 });
+
 /**
  * @description for saving note details in database
  * @param {userData} userData 
@@ -48,10 +49,26 @@ module.exports.createNote = (userData) => {
     });
 }
 
+/**
+ * @description for reading all nots of user
+ * @param {userData} userData 
+ */
 module.exports.getAllNote = (id) => {
     return this.noteModel.findAll({
         where: {
             id: id //checking if the userid sent by client is present in the db(valid)
         }
     })
+}
+
+module.exports.UpdateNote = (notData, noteId) => {
+    return new Promise((resolve, reject) => {
+        this.noteModel.update({ description: notData }, { where: { note_id: noteId } })
+            .then(data => {
+                resolve(data)
+            })
+            .catch(err => {
+                reject(err)
+            })
+    });
 }

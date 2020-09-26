@@ -50,4 +50,16 @@ module.exports = class NoteService {
                 })
         });
     }
+
+    updateNote(notedata, noteId) {
+        return new Promise((resolve, reject) => {
+            note.UpdateNote(notedata, noteId)
+                .then(data => {
+                    resolve(data)
+                })
+                .catch(error => {
+                    reject(error)
+                })
+        });
+    }
 }
