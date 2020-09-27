@@ -20,7 +20,6 @@ module.exports = class UserService {
             const token = jwt.sign(mail, process.env.JWT_KEY, { expiresIn: 1440 })
             User.createUser(userData).then(data => {
                 if (data) {
-                    console.log('////////////mailer')
                     mailer.mailer(email, token, flag)
                     resolve(data)
                 } else {
@@ -48,7 +47,7 @@ module.exports = class UserService {
                             const mail = {
                                 email: user.dataValues.email
                             }
-                            const token = jwt.sign(mail, process.env.JWT_KEY, { expiresIn: 1440 })
+                            const token = jwt.sign(mail, process.env.JWT_LOGIN_KEY, { expiresIn: 1440 })
                             User.login(token, email)
                                 .then(() => {
                                     resolve(token)
@@ -65,7 +64,7 @@ module.exports = class UserService {
                     }
                 })
                 .catch(err => {
-                    reject(err)
+                    reject("/////////" + err)
                 })
         })
     }

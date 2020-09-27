@@ -1,5 +1,6 @@
 const user = require('../controller/users')
 const note = require('../controller/notes')
+const middle = require('../middleware/authentication')
 const { check } = require('express-validator');
 const controller = new user();
 const noteController = new note();
@@ -18,7 +19,8 @@ module.exports = (app) => {
     app.post('/verify-email', controller.mailverify)
 
     /****routes for notes****/
-    app.post('/create-note', noteController.createNote)
-    app.post('/read-note', noteController.readAllNote)
-    app.put('/update-note', noteController.updateNote)
+    app.post('/create-note', middle.auth, noteController.createNote)
+    app.post('/read-note', middle.auth, noteController.readAllNote)
+    app.put('/update-note', middle.auth, noteController.updateNote)
+        //app.put('/delete-note', noteController.deleteNote)
 }

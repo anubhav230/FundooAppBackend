@@ -16,7 +16,8 @@ module.exports = class Note {
             'success': false
         };
         try {
-            let login_key = req.body.login_key
+            let login_key = req.headers.login_key
+            console.log(login_key)
             const noteData = {
                 title: req.body.title,
                 description: req.body.description,
@@ -76,15 +77,15 @@ module.exports = class Note {
             'success': false
         };
         try {
-            // let notObj = {
-            //     title: req.body.title,
-            //     description: req.body.description,
-            //     is_pinned: req.body.is_pined,
-            //     remainder: req.body.remainder,
-            //     noteColor: req.body.noteColor,
-            //     is_archived: req.body.is_archived,
-            //     is_delete: req.body.is_delete,
-            // }
+            let notObj = {
+                title: req.body.title,
+                description: req.body.description,
+                is_pinned: req.body.is_pined,
+                remainder: req.body.remainder,
+                noteColor: req.body.noteColor,
+                is_archived: req.body.is_archived,
+                is_delete: req.body.is_delete,
+            }
             let notedata = req.body.description
             let noteId = req.body.note_id
             noteService.updateNote(notedata, noteId)
@@ -100,5 +101,9 @@ module.exports = class Note {
         } catch (error) {
             res.send(response);
         }
+    }
+
+    deleteNote(req, res) {
+
     }
 }
