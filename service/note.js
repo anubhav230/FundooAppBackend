@@ -3,7 +3,6 @@ const note = require('../model/noteModel');
 
 
 module.exports = class NoteService {
-
     /**
      * @description finding user id and creating new note
      * @param {noteData} noteData note data
@@ -11,6 +10,7 @@ module.exports = class NoteService {
      */
     createNote(noteData, login_key) {
         return new Promise((resolve, reject) => {
+            console.log(login_key)
             user.finduser(login_key)
                 .then(id => {
                     noteData['id'] = id;
@@ -33,9 +33,9 @@ module.exports = class NoteService {
      * @description reading all notes
      * @param {reqbody} reqbody 
      */
-    readAllNote(reqbody) {
+    readAllNote(token) {
         return new Promise((resolve, reject) => {
-            user.finduser(reqbody.login_key)
+            user.finduser(token)
                 .then(id => {
                     note.getAllNote(id)
                         .then(data => {

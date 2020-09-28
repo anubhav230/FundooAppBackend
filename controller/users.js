@@ -85,7 +85,8 @@ module.exports = class fundooController {
             }
             const email = req.body.email
             const password = req.body.password
-            userService.userlogin(email, password)
+                //userService.userlogin(email, password)
+            userService.userlogin(req.body)
                 .then(result => {
                     response.message = 'Successfully Logged In';
                     response.success = true;

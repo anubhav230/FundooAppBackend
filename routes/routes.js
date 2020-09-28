@@ -20,7 +20,7 @@ module.exports = (app) => {
 
     /****routes for notes****/
     app.post('/create-note', middle.auth, noteController.createNote)
-    app.post('/read-note', middle.auth, noteController.readAllNote)
+    app.post('/get-note', middle.auth, noteController.readAllNote)
     app.put('/update-note', middle.auth, noteController.updateNote)
         //app.put('/delete-note', noteController.deleteNote)
 }

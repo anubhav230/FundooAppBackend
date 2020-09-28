@@ -1,5 +1,6 @@
 const { pool } = require('../dbConfig/dbConfig');
 const note = require('../service/note');
+const logger = require('../dbConfig/logger')
 
 const noteService = new note();
 
@@ -27,18 +28,22 @@ module.exports = class Note {
                 is_archived: req.body.is_archived,
                 is_delete: req.body.is_delete,
             }
+
             noteService.createNote(noteData, login_key)
                 .then(() => {
+                    logger.info("congrats You Are Successsfully created the note");
                     response.message = 'Successfully note created';
                     response.success = true;
                     res.status(200).send(response);
                 })
                 .catch(err => {
-                    response.message = 'note creation failed' + err;
+                    logger.error('note creation failed')
+                    response.message = 'note creation failed: ' + err;
                     res.status(400).send(response);
                 });
         } catch (error) {
             response.message = "Title and Content should not be empty" + error
+            logger.error(response.message)
             res.status(400).send(response);
         }
     }
@@ -54,19 +59,23 @@ module.exports = class Note {
             'success': false
         };
         try {
-            noteService.readAllNote(req.body)
+            let login_key = req.headers.login_key
+            noteService.readAllNote(login_key)
                 .then(data => {
+                    logger.info("congrats You Are Successsfully read all note......");
                     response.message = 'Successsfully read all note......';
                     response.success = true;
                     response.data = data
                     res.status(200).send(response);
                 })
                 .catch(err => {
+                    logger.error('Some issue in reading notes')
                     response.message = 'Some issue in reading notes' + err;
                     res.status(400).send(response);
                 })
         } catch (error) {
             response.message = "Some issue in reading notes" + error
+            logger.error(response.message);
             res.status(400).send(response);
         }
     }
@@ -90,15 +99,18 @@ module.exports = class Note {
             let noteId = req.body.note_id
             noteService.updateNote(notedata, noteId)
                 .then(() => {
+                    logger.info("congrats You Are Successsfully updated the note");
                     response.message = 'Successfully updated';
                     response.success = true;
                     res.status(200).send(response);
                 })
                 .catch(err => {
                     response.message = 'updetion failed. ' + err;
+                    logger.error(response.message);
                     res.status(400).send(response);
                 })
         } catch (error) {
+            logger.error(response.message + error);
             res.send(response);
         }
     }

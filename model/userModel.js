@@ -84,6 +84,7 @@ module.exports.verificationToken = (verificationToken, email) => {
  * @param {email} email 
  */
 module.exports.mailVerification = (email) => {
+    console.log('from is varified')
     return this.userModel.update({ is_verified: true }, { where: { email: email } })
 }
 
