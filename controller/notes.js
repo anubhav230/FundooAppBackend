@@ -80,6 +80,11 @@ module.exports = class Note {
         }
     }
 
+    /**
+     * @description controller for update note
+     * @param {req} req 
+     * @param {res} res 
+     */
     updateNote(req, res) {
         let response = {
             'message': 'Something bad happend',
@@ -115,6 +120,11 @@ module.exports = class Note {
         }
     }
 
+    /**
+     * @description controller for deleting note
+     * @param {req} req 
+     * @param {res} res 
+     */
     deleteNote(req, res) {
         let response = {
             'message': 'Something bad happend',

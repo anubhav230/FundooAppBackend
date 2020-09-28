@@ -61,6 +61,11 @@ module.exports.getAllNote = (id) => {
     })
 }
 
+/**
+ * @description user can update not with note_id
+ * @param {notData} notData 
+ * @param {noteId} noteId 
+ */
 module.exports.UpdateNote = (notData, noteId) => {
     return new Promise((resolve, reject) => {
         this.noteModel.update({ description: notData }, { where: { note_id: noteId } })
@@ -73,6 +78,10 @@ module.exports.UpdateNote = (notData, noteId) => {
     });
 }
 
+/**
+ * @description finding note in db with note_id
+ * @param {note_id} note_id 
+ */
 module.exports.findNote = (note_id) => {
     return this.noteModel.findOne({
         where: {
@@ -81,6 +90,10 @@ module.exports.findNote = (note_id) => {
     })
 }
 
+/**
+ * @description if node is present in db then delete that particular note
+ * @param {note_id} note_id 
+ */
 module.exports.delete = (note_id) => {
     return new Promise((resolve, reject) => {
         this.findNote(note_id) // Check requested note is present or not in db

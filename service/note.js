@@ -34,23 +34,27 @@ module.exports = class NoteService {
      * @param {reqbody} reqbody 
      */
     readAllNote(token) {
-        return new Promise((resolve, reject) => {
-            user.finduser(token)
-                .then(id => {
-                    note.getAllNote(id)
-                        .then(data => {
-                            resolve(data)
-                        })
-                        .catch(err => {
-                            reject('error' + err)
-                        });
-                })
-                .catch(errr => {
-                    reject(errr)
-                });
-        });
-    }
-
+            return new Promise((resolve, reject) => {
+                user.finduser(token)
+                    .then(id => {
+                        note.getAllNote(id)
+                            .then(data => {
+                                resolve(data)
+                            })
+                            .catch(err => {
+                                reject('error' + err)
+                            });
+                    })
+                    .catch(errr => {
+                        reject(errr)
+                    });
+            });
+        }
+        /**
+         * @description service function for updating note with note_id
+         * @param {notedata} notedata 
+         * @param {noteId} noteId 
+         */
     updateNote(notedata, noteId) {
         return new Promise((resolve, reject) => {
             note.UpdateNote(notedata, noteId)
@@ -63,6 +67,10 @@ module.exports = class NoteService {
         });
     }
 
+    /**
+     * @description service function for deleting note by note_id
+     * @param {note_id} note_id 
+     */
     deleteNote(note_id) {
         return new Promise((resolve, reject) => {
             note.delete(note_id)
@@ -72,7 +80,6 @@ module.exports = class NoteService {
                 .catch(err => {
                     reject('error: ' + err)
                 })
-
         });
     }
 }
