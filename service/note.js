@@ -43,11 +43,11 @@ module.exports = class NoteService {
                         })
                         .catch(err => {
                             reject('error' + err)
-                        })
+                        });
                 })
                 .catch(errr => {
                     reject(errr)
-                })
+                });
         });
     }
 
@@ -60,6 +60,19 @@ module.exports = class NoteService {
                 .catch(error => {
                     reject(error)
                 })
+        });
+    }
+
+    deleteNote(note_id) {
+        return new Promise((resolve, reject) => {
+            note.delete(note_id)
+                .then(data => {
+                    resolve(data)
+                })
+                .catch(err => {
+                    reject('error: ' + err)
+                })
+
         });
     }
 }

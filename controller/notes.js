@@ -116,6 +116,27 @@ module.exports = class Note {
     }
 
     deleteNote(req, res) {
-
+        let response = {
+            'message': 'Something bad happend',
+            'success': false
+        };
+        try {
+            const note_id = req.body.note_id
+            noteService.deleteNote(note_id)
+                .then(() => {
+                    logger.info("Successsfully deleted the note");
+                    response.message = 'Successfully deleted';
+                    response.success = true;
+                    res.status(200).send(response);
+                })
+                .catch(err => {
+                    response.message = 'deletion failed. Some issue in deleting the note';
+                    logger.error(response.message + err)
+                    res.status(400).send(response);
+                })
+        } catch (error) {
+            logger.error(response.message + error);
+            res.send(response);
+        }
     }
 }

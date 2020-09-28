@@ -36,3 +36,42 @@
 {"message":"Successfully note created","level":"info","timestamp":"2020-09-27T23:48:56.936Z"}
 {"message":"note creation failed","level":"error","timestamp":"2020-09-27T23:49:31.508Z"}
 {"message":"Successsfully read all note......","level":"info","timestamp":"2020-09-27T23:49:31.742Z"}
+{"message":"Server is listening on port 4000","level":"info","timestamp":"2020-09-28T00:45:59.748Z"}
+{"message":"Server is listening on port 4000","level":"info","timestamp":"2020-09-28T00:46:06.806Z"}
+{"message":"Server is listening on port 4000","level":"info","timestamp":"2020-09-28T00:46:46.320Z"}
+{"message":"Server is listening on port 4000","level":"info","timestamp":"2020-09-28T00:46:48.437Z"}
+{"level":"info","message":"Server is listening on port 4000","timestamp":"2020-09-28T00:48:22.647Z"}
+{"level":"info","message":"Server is listening on port 4000","timestamp":"2020-09-28T00:50:16.038Z"}
+{"level":"info","message":"Server is listening on port 4000","timestamp":"2020-09-28T00:50:27.889Z"}
+{"level":"info","message":"Server is listening on port 4000","timestamp":"2020-09-28T00:50:42.715Z"}
+{"level":"info","message":"Server is listening on port 4000","timestamp":"2020-09-28T00:50:46.158Z"}
+{"level":"info","message":"Server is listening on port 4000","timestamp":"2020-09-28T00:50:48.617Z"}
+{"level":"info","message":"Server is listening on port 4000","timestamp":"2020-09-28T00:50:50.369Z"}
+{"level":"info","message":"Server is listening on port 4000","timestamp":"2020-09-28T00:50:52.215Z"}
+{"level":"info","message":"Server is listening on port 4000","timestamp":"2020-09-28T00:51:03.352Z"}
+{"level":"info","message":"Server is listening on port 4000","timestamp":"2020-09-28T00:51:14.318Z"}
+{"level":"info","message":"Server is listening on port 4000","timestamp":"2020-09-28T00:51:19.400Z"}
+{"level":"info","message":"Server is listening on port 4000","timestamp":"2020-09-28T00:51:22.581Z"}
+{"level":"info","message":"Server is listening on port 4000","timestamp":"2020-09-28T00:52:23.477Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T07:20:07.641Z"}
+{"message":"updetion failed. SequelizeDatabaseError: invalid input syntax for integer: \"Ankit's notes\"","level":"error","timestamp":"2020-09-28T07:20:07.836Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T07:20:36.757Z"}
+{"message":"congrats You Are Successsfully updated the note","level":"info","timestamp":"2020-09-28T07:20:36.821Z"}
+{"message":"deletion failed. Some issue in deleting the noteTypeError: note.delete is not a function","level":"error","timestamp":"2020-09-28T07:30:11.468Z"}
+{"message":"deletion failed. Some issue in deleting the noteerror: ReferenceError: noteid is not defined","level":"error","timestamp":"2020-09-28T07:30:50.575Z"}
+{"message":"deletion failed. Some issue in deleting the noteerror: TypeError: this.findNote is not a function","level":"error","timestamp":"2020-09-28T07:31:16.036Z"}
+{"message":"deletion failed. Some issue in deleting the noteerror: TypeError: this.noteModel.findNote is not a function","level":"error","timestamp":"2020-09-28T07:31:39.566Z"}
+{"message":"deletion failed. Some issue in deleting the noteerror: ReferenceError: noteModel is not defined","level":"error","timestamp":"2020-09-28T07:33:55.812Z"}
+{"message":"deletion failed. Some issue in deleting the noteerror: Sorry no such note found","level":"error","timestamp":"2020-09-28T07:35:36.891Z"}
+{"message":"deletion failed. Some issue in deleting the noteerror: Sorry no such note found: ","level":"error","timestamp":"2020-09-28T07:37:05.414Z"}
+{"message":"deletion failed. Some issue in deleting the noteerror: Sorry no such note found: ","level":"error","timestamp":"2020-09-28T07:38:16.702Z"}
+{"message":"deletion failed. Some issue in deleting the noteerror: Sorry no such note found: ","level":"error","timestamp":"2020-09-28T07:38:52.546Z"}
+{"message":"deletion failed. Some issue in deleting the noteerror: Sorry no such note found: ","level":"error","timestamp":"2020-09-28T07:39:19.570Z"}
+{"message":"deletion failed. Some issue in deleting the noteerror: Sorry no such note found: ","level":"error","timestamp":"2020-09-28T07:39:39.270Z"}
+{"message":"deletion failed. Some issue in deleting the noteerror: Sorry Some issue come in deleting the note: ","level":"error","timestamp":"2020-09-28T07:39:57.249Z"}
+{"message":"deletion failed. Some issue in deleting the noteerror: Sorry Some issue come in deleting the note: ","level":"error","timestamp":"2020-09-28T07:41:24.193Z"}
+{"message":"deletion failed. Some issue in deleting the noteerror: SequelizeDatabaseError: column \"notei_d\" does not exist","level":"error","timestamp":"2020-09-28T07:41:52.585Z"}
+{"message":"deletion failed. Some issue in deleting the noteerror: Sorry Some issue come in deleting the note: ","level":"error","timestamp":"2020-09-28T07:42:15.383Z"}
+{"message":"deletion failed. Some issue in deleting the noteerror: Sorry Some issue come in deleting the note: ","level":"error","timestamp":"2020-09-28T07:42:28.181Z"}
+{"message":"Successsfully deleted the note","level":"info","timestamp":"2020-09-28T07:42:52.939Z"}
+{"message":"Successsfully deleted the note","level":"info","timestamp":"2020-09-28T07:43:50.482Z"}

@@ -11,6 +11,10 @@ const logger = createLogger({
             level: 'error',
             filename: 'error.log',
             format: format.combine(format.timestamp(), format.json())
+        }),
+        new transports.Console({
+            level: 'info',
+            format: format.combine(format.timestamp(), format.json())
         })
     ]
 });

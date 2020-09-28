@@ -22,5 +22,5 @@ module.exports = (app) => {
     app.post('/create-note', middle.auth, noteController.createNote)
     app.post('/get-note', middle.auth, noteController.readAllNote)
     app.put('/update-note', middle.auth, noteController.updateNote)
-        //app.put('/delete-note', noteController.deleteNote)
+    app.delete('/delete-note', noteController.deleteNote)
 }
