@@ -44,3 +44,56 @@
 {"message":"deletion failed. Some issue in deleting the noteerror: SequelizeDatabaseError: column \"notei_d\" does not exist","level":"error","timestamp":"2020-09-28T07:41:52.587Z"}
 {"message":"deletion failed. Some issue in deleting the noteerror: Sorry Some issue come in deleting the note: ","level":"error","timestamp":"2020-09-28T07:42:15.384Z"}
 {"message":"deletion failed. Some issue in deleting the noteerror: Sorry Some issue come in deleting the note: ","level":"error","timestamp":"2020-09-28T07:42:28.181Z"}
+{"message":"invalid token or token has expired","level":"error","timestamp":"2020-09-28T10:46:07.559Z"}
+{"message":"invalid token or token has expired","level":"error","timestamp":"2020-09-28T21:19:26.562Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T21:25:37.192Z"}
+{"message":"Some issue in reading notes","level":"error","timestamp":"2020-09-28T21:25:37.403Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T21:26:23.606Z"}
+{"message":"Some issue in reading notes","level":"error","timestamp":"2020-09-28T21:26:23.749Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T21:27:00.367Z"}
+{"message":"Some issue in reading notes","level":"error","timestamp":"2020-09-28T21:27:00.538Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T21:27:52.068Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T21:28:06.762Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T21:28:50.413Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T21:30:08.387Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T21:30:52.774Z"}
+{"message":"Some issue in reading notes","level":"error","timestamp":"2020-09-28T21:30:53.031Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T21:31:33.171Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T22:06:19.168Z"}
+{"message":"Some issue in reading notes","level":"error","timestamp":"2020-09-28T22:06:19.454Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T22:07:12.777Z"}
+{"message":"Some issue in reading notes","level":"error","timestamp":"2020-09-28T22:07:12.916Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T22:13:37.670Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T22:13:43.945Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T22:13:47.758Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T22:13:52.231Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T22:14:04.647Z"}
+{"message":"Some issue in reading notes","level":"error","timestamp":"2020-09-28T22:14:04.789Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T22:19:01.446Z"}
+{"message":"Some issue in reading notes","level":"error","timestamp":"2020-09-28T22:19:01.686Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T22:19:51.766Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T22:20:03.238Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T22:20:25.221Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T22:28:51.088Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T22:51:45.509Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T23:12:57.647Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T23:13:29.349Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T23:14:25.261Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T23:18:05.937Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T23:18:44.584Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-29T06:18:09.590Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-29T06:18:20.180Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-29T06:29:07.248Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-29T06:29:35.867Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-29T06:30:00.693Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-29T06:30:20.297Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-29T06:31:53.644Z"}
+{"message":"Some issue in reading notes","level":"error","timestamp":"2020-09-29T06:31:53.903Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-29T06:32:48.901Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-29T06:33:02.446Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-29T06:33:26.298Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-29T06:33:52.794Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-29T06:34:09.226Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-29T06:34:13.355Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-29T06:35:05.934Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-29T06:35:08.938Z"}

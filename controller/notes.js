@@ -1,7 +1,7 @@
 const { pool } = require('../dbConfig/dbConfig');
 const note = require('../service/note');
 const logger = require('../dbConfig/logger')
-
+const cache = require('../middleware/checkCache')
 const noteService = new note();
 
 module.exports = class Note {
@@ -18,7 +18,6 @@ module.exports = class Note {
         };
         try {
             let login_key = req.headers.login_key
-            console.log(login_key)
             const noteData = {
                 title: req.body.title,
                 description: req.body.description,
@@ -27,6 +26,7 @@ module.exports = class Note {
                 noteColor: req.body.noteColor,
                 is_archived: req.body.is_archived,
                 is_delete: req.body.is_delete,
+
             }
 
             noteService.createNote(noteData, login_key)
@@ -54,6 +54,7 @@ module.exports = class Note {
      * @param {res} res 
      */
     readAllNote(req, res) {
+        console.log('from conroller got get note')
         let response = {
             'message': 'Something bad happend',
             'success': false
@@ -62,6 +63,7 @@ module.exports = class Note {
             let login_key = req.headers.login_key
             noteService.readAllNote(login_key)
                 .then(data => {
+                    cache.loadCache(data, login_key)
                     logger.info("congrats You Are Successsfully read all note......");
                     response.message = 'Successsfully read all note......';
                     response.success = true;
