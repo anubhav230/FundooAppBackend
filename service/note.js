@@ -6,25 +6,15 @@ module.exports = class NoteService {
     /**
      * @description finding user id and creating new note
      * @param {noteData} noteData note data
-     * @param {login_key} login_key for getting userid from user table
      */
-    createNote(noteData, login_key) {
+    createNote(noteData) {
         return new Promise((resolve, reject) => {
-            console.log(login_key)
-            user.finduser(login_key)
-                .then(id => {
-                    noteData['id'] = id;
-                    console.log(noteData)
-                    note.createNote(noteData)
-                        .then(noteData => {
-                            resolve(noteData)
-                        })
-                        .catch(err => {
-                            reject(err)
-                        })
+            note.createNote(noteData)
+                .then(noteData => {
+                    resolve(noteData)
                 })
                 .catch(err => {
-                    reject('unable to create note: ' + err)
+                    reject(err)
                 })
         });
     }
@@ -33,28 +23,23 @@ module.exports = class NoteService {
      * @description reading all notes
      * @param {reqbody} reqbody 
      */
-    readAllNote(token) {
-            return new Promise((resolve, reject) => {
-                user.finduser(token)
-                    .then(id => {
-                        note.getAllNote(id)
-                            .then(data => {
-                                resolve(data)
-                            })
-                            .catch(err => {
-                                reject('error' + err)
-                            });
-                    })
-                    .catch(errr => {
-                        reject(errr)
-                    });
-            });
-        }
-        /**
-         * @description service function for updating note with note_id
-         * @param {notedata} notedata 
-         * @param {noteId} noteId 
-         */
+    readAllNote(user_id) {
+        return new Promise((resolve, reject) => {
+            note.getAllNote(user_id)
+                .then(data => {
+                    resolve(data)
+                })
+                .catch(err => {
+                    reject('error' + err)
+                })
+        })
+    }
+
+    /**
+     * @description service function for updating note with note_id
+     * @param {notedata} notedata 
+     * @param {noteId} noteId 
+     */
     updateNote(notedata, noteId) {
         return new Promise((resolve, reject) => {
             note.UpdateNote(notedata, noteId)

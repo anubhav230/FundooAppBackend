@@ -1,6 +1,6 @@
 const redis = require('redis');
 const REDIS_PORT = process.env.PORT || 6379;
-const clint = redis.createClient(REDIS_PORT)
+const redis_client = redis.createClient(REDIS_PORT)
 
 /**
  * @description function for loading data form cache memory
@@ -9,18 +9,16 @@ const clint = redis.createClient(REDIS_PORT)
  * @param {next} next 
  */
 module.exports.checkCache = (req, res, next) => {
-    const id = req.headers.login_key
-    clint.get(id, (err, data) => {
+    console.log(req.decoded)
+    redis_client.get(`notes : ${req.decoded}`, (err, data) => {
         if (err) {
             console.log(err);
             res.status(500).send(err);
         }
-        //if no match found
         if (data != null) {
             console.log('loading data from redis')
             res.send(data);
         } else {
-            //proceed to next middleware function
             next();
         }
     });
@@ -31,6 +29,18 @@ module.exports.checkCache = (req, res, next) => {
  * @param {data} data 
  * @param {login_key} login_key 
  */
-module.exports.loadCache = (data, login_key) => {
-    clint.setex(login_key, 10, JSON.stringify(data));
+module.exports.loadCache = (user_id, data) => {
+    redis_client.set(`notes : ${user_id}`, JSON.stringify(data));
+}
+
+module.exports.deleteCache = (userId) => {
+    redis_client.del(`notes : ${userId}`, JSON.stringify({
+        from: "cache memory",
+    }), (err, data) => {
+        if (err) {
+            console.log("eroor");
+        } else {
+            console.log("deleted", data)
+        }
+    })
 }

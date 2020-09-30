@@ -11,7 +11,7 @@ module.exports.noteModel = db.sequelize.define('notes', {
         type: sequelize.STRING,
         defaultValue: null
     },
-    is_pinned: {
+    isPinned: {
         type: sequelize.BOOLEAN,
         defaultValue: false
     },
@@ -23,13 +23,17 @@ module.exports.noteModel = db.sequelize.define('notes', {
         type: sequelize.STRING,
         defaultValue: null
     },
-    is_archived: {
+    isArchived: {
         type: sequelize.BOOLEAN,
         defaultValue: false
     },
-    is_delete: {
+    isDelete: {
         type: sequelize.BOOLEAN,
         defaultValue: false
+    },
+    userId: {
+        type: sequelize.STRING,
+        allowNull: false
     }
 });
 
@@ -37,7 +41,8 @@ module.exports.noteModel = db.sequelize.define('notes', {
  * @description for saving note details in database
  * @param {userData} userData 
  */
-module.exports.createNote = (userData) => {
+module.exports.getNote = (userData) => {
+    console.log(userData)
     return new Promise((resolve, reject) => {
         this.noteModel.create(userData) //create method of sequelize
             .then(user => {
@@ -53,12 +58,12 @@ module.exports.createNote = (userData) => {
  * @description for reading all nots of user
  * @param {userData} userData 
  */
-module.exports.getAllNote = (id) => {
+module.exports.getAllNote = (userId) => {
     return this.noteModel.findAll({
         where: {
-            id: id //checking if the userid sent by client is present in the db(valid)
+            userId: userId //checking if the userid sent by client is present in the db(valid)
         }
-    })
+    });
 }
 
 /**
@@ -85,9 +90,9 @@ module.exports.UpdateNote = (notData, noteId) => {
 module.exports.findNote = (note_id) => {
     return this.noteModel.findOne({
         where: {
-            note_id: note_id //checking if the email address sent by client is present in the db(valid)
+            id: note_id //checking if the email address sent by client is present in the db(valid)
         }
-    })
+    });
 }
 
 /**

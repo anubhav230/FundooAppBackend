@@ -16,8 +16,9 @@ module.exports = class Note {
             'message': 'Something bad happend',
             'success': false
         };
+        console.log(req.decoded)
+            //let id = req.decoded
         try {
-            let login_key = req.headers.login_key
             const noteData = {
                 title: req.body.title,
                 description: req.body.description,
@@ -26,11 +27,12 @@ module.exports = class Note {
                 noteColor: req.body.noteColor,
                 is_archived: req.body.is_archived,
                 is_delete: req.body.is_delete,
-
+                userId: req.decoded
             }
 
-            noteService.createNote(noteData, login_key)
+            noteService.createNote(noteData)
                 .then(() => {
+                    cache.deleteCache(req.decoded)
                     logger.info("congrats You Are Successsfully created the note");
                     response.message = 'Successfully note created';
                     response.success = true;
@@ -54,16 +56,18 @@ module.exports = class Note {
      * @param {res} res 
      */
     readAllNote(req, res) {
-        console.log('from conroller got get note')
+        console.log('get notes from controller')
         let response = {
             'message': 'Something bad happend',
             'success': false
         };
         try {
-            let login_key = req.headers.login_key
-            noteService.readAllNote(login_key)
+            //let login_key = req.headers.login_key
+            let user_id = req.decoded
+            console.log(user_id)
+            noteService.readAllNote(user_id)
                 .then(data => {
-                    cache.loadCache(data, login_key)
+                    cache.loadCache(req.decoded, data)
                     logger.info("congrats You Are Successsfully read all note......");
                     response.message = 'Successsfully read all note......';
                     response.success = true;
@@ -71,12 +75,12 @@ module.exports = class Note {
                     res.status(200).send(response);
                 })
                 .catch(err => {
-                    logger.error('Some issue in reading notes')
-                    response.message = 'Some issue in reading notes' + err;
+                    logger.error('Some issue in reading notes: ')
+                    response.message = 'Some issue in reading notes: ' + err;
                     res.status(400).send(response);
                 })
         } catch (error) {
-            response.message = "Some issue in reading notes" + error
+            response.message = "Some issue in reading notes: " + error
             logger.error(response.message);
             res.status(400).send(response);
         }

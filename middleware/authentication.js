@@ -1,9 +1,13 @@
 const jwt = require('jsonwebtoken')
 const logger = require('../dbConfig/logger')
-module.exports.auth = (req, res, next) => {
+
+const redis = require('redis')
+const REDIS_PORT = process.env.PORT || 6379;
+const redis_client = redis.createClient(REDIS_PORT);
+
+
+module.exports.tokenVerify = (req, res, next) => {
     var token = req.headers['login_key'];
-    console.log("login token check");
-    console.log(token)
     if (token) {
         jwt.verify(token, process.env.JWT_LOGIN_KEY, (err, decoded) => {
             if (err) {
@@ -13,13 +17,14 @@ module.exports.auth = (req, res, next) => {
                     message: 'Token is not valid'
                 });
             } else {
-                logger.error('note creation failed')
+                logger.error('login token has verified')
                 console.log("verified")
-                req.decoded = decoded;
+                req.decoded = decoded.user_id;
                 next();
             }
         });
     } else {
+        logger.error('No token provided...')
         return res.send({
             success: false,
             message: 'No token provided.'

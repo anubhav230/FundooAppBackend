@@ -51,7 +51,7 @@ module.exports = class UserService {
                                 email: user.dataValues.email,
                                 id: user.dataValues.id
                             }
-                            const token = jwt.sign(data, process.env.JWT_LOGIN_KEY, { expiresIn: '10h' })
+                            const token = jwt.sign(data, process.env.JWT_LOGIN_KEY)
                             User.login(token, email)
                                 .then(() => {
                                     resolve(token)
