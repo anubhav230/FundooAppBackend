@@ -34,6 +34,26 @@ module.exports = class Lable {
     }
 
     getLabel(req, res) {
+        let response = {
+            'message': 'Something bad happend',
+            'success': false
+        };
+        try {
+            labelService.readLabel(req.decoded)
+                .then(data => {
+                    logger.info("congrats You Are Successsfully read all labels......");
+                    response.message = 'Successsfully read all labels......';
+                    response.success = true;
+                    response.data = data
+                    res.status(200).send(response);
+                })
+                .catch(err => {
+                    logger.error('Some issue in reading labels: ')
+                    response.message = 'Some issue in reading labels: ' + err;
+                    res.status(400).send(response);
+                })
+        } catch (error) {
 
+        }
     }
 }

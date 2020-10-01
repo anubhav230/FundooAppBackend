@@ -299,3 +299,4 @@
 {"message":"label creation failed","level":"error","timestamp":"2020-10-01T20:21:53.828Z"}
 {"message":"label creation failed","level":"error","timestamp":"2020-10-01T20:21:58.692Z"}
 {"message":"label creation failed","level":"error","timestamp":"2020-10-01T20:23:31.534Z"}
+{"message":"Some issue in reading labels: ","level":"error","timestamp":"2020-10-01T21:40:08.478Z"}

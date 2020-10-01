@@ -14,4 +14,16 @@ module.exports = class Lable {
         });
     }
 
+    readLabel(userId) {
+        return new Promise((resolve, reject) => {
+            label.readLabel(userId)
+                .then(data => {
+                    resolve(data)
+                })
+                .catch(err => {
+                    reject('error' + err)
+                })
+        })
+    }
+
 }

@@ -30,4 +30,5 @@ module.exports = (app) => {
 
     /****routes for notes****/
     app.post('/create-label', tokenVerify, lableController.createLable)
+    app.post('/get-label', tokenVerify, lableController.getLabel)
 }
