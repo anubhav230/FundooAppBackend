@@ -3,9 +3,11 @@ const note = require('../controller/notesController')
 const tokenVerify = require('../middleware/authentication').tokenVerify
 const { check } = require('express-validator');
 const checkCache = require('../middleware/checkCache')
+const lable = require('../controller/labelController')
 
 const controller = new user();
 const noteController = new note();
+const lableController = new lable();
 /**
  * @description Exporting routes
  * @param {function} app http requests 
@@ -26,5 +28,6 @@ module.exports = (app) => {
     app.put('/update-note', tokenVerify, noteController.updateNote)
     app.delete('/delete-note', tokenVerify, noteController.deleteNote)
 
-    app.post('/createlabel', )
+    /****routes for notes****/
+    app.post('/createlabel', lableController.createLable)
 }

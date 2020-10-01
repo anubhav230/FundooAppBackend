@@ -4,16 +4,12 @@ const logger = createLogger({
     transports: [
         new transports.File({
             level: 'info',
-            filename: 'info.log',
+            filename: 'logs/info.log',
             format: format.combine(format.timestamp(), format.json())
         }),
         new transports.File({
             level: 'error',
-            filename: 'error.log',
-            format: format.combine(format.timestamp(), format.json())
-        }),
-        new transports.Console({
-            level: 'info',
+            filename: 'logs/error.log',
             format: format.combine(format.timestamp(), format.json())
         })
     ]
