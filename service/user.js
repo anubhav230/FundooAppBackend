@@ -40,25 +40,20 @@ module.exports = class UserService {
         return new Promise((resolve, reject) => {
             let email = reqbody.email
             let password = reqbody.password
-            let id = reqbody.id
+                // let userId = reqbody.id
+                // console.log(userId)
             User.findEmail(email)
                 .then(user => {
-                    let is_verified = user.dataValues.is_verified
-                    console.log(is_verified)
-                    if (is_verified) {
+                    let isVerified = user.dataValues.isVerified
+                    console.log(isVerified)
+                    if (isVerified) {
                         if (bcrypt.compareSync(password, user.password)) {
                             const data = {
                                 email: user.dataValues.email,
                                 id: user.dataValues.id
                             }
                             const token = jwt.sign(data, process.env.JWT_LOGIN_KEY)
-                            User.login(token, email)
-                                .then(() => {
-                                    resolve(token)
-                                })
-                                .catch(error => {
-                                    reject(error)
-                                })
+                            resolve(token)
                         } else {
                             console.log
                             reject({ error: "Wrong Credentials" })

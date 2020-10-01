@@ -107,7 +107,7 @@ module.exports = class Note {
                 is_delete: req.body.is_delete,
             }
             let notedata = req.body.description
-            let noteId = req.body.note_id
+            let noteId = req.body.id
             noteService.updateNote(notedata, noteId)
                 .then(() => {
                     logger.info("congrats You Are Successsfully updated the note");
@@ -137,7 +137,7 @@ module.exports = class Note {
             'success': false
         };
         try {
-            const note_id = req.body.note_id
+            const note_id = req.body.id
             noteService.deleteNote(note_id)
                 .then(() => {
                     logger.info("Successsfully deleted the note");

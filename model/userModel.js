@@ -21,13 +21,7 @@ module.exports.userModel = db.sequelize.define('user', {
         type: sequelize.STRING,
         allowNull: false
     },
-    login_key: {
-        type: sequelize.STRING
-    },
-    verificationToken: {
-        type: sequelize.STRING
-    },
-    is_verified: {
+    isVerified: {
         type: sequelize.BOOLEAN
     }
 });
@@ -66,9 +60,9 @@ module.exports.findEmail = (email) => {
      * @param {logintoken} logintoken 
      * @param {email} email 
      */
-module.exports.login = (login_key, email) => { //
-    return this.userModel.update({ login_key: login_key }, { where: { email: email } })
-}
+    // module.exports.login = (login_key, email) => { //
+    //     return this.userModel.update({ login_key: login_key }, { where: { email: email } })
+    // }
 
 /**
  * @Description : for updating JWT tokan in database whenever user trying to verify email 

@@ -9,15 +9,16 @@ const redis_client = redis.createClient(REDIS_PORT)
  * @param {next} next 
  */
 module.exports.checkCache = (req, res, next) => {
-    console.log(req.decoded)
+    console.log(`notes : ${req.decoded}`)
     redis_client.get(`notes : ${req.decoded}`, (err, data) => {
         if (err) {
             console.log(err);
             res.status(500).send(err);
         }
         if (data != null) {
+            console.log("data from redis" + data)
             console.log('loading data from redis')
-            res.send(data);
+            res.status(200).send(data);
         } else {
             next();
         }
@@ -27,12 +28,17 @@ module.exports.checkCache = (req, res, next) => {
 /**
  * @description fuction for loading data in cache memory
  * @param {data} data 
- * @param {login_key} login_key 
+ * @param {user_id} user_id 
  */
-module.exports.loadCache = (user_id, data) => {
-    redis_client.set(`notes : ${user_id}`, JSON.stringify(data));
+module.exports.loadCache = (userId, data) => {
+    redis_client.set(`notes : ${userId}`, JSON.stringify(data));
 }
 
+
+/**
+ * 
+ * @param {userId} userId 
+ */
 module.exports.deleteCache = (userId) => {
     redis_client.del(`notes : ${userId}`, JSON.stringify({
         from: "cache memory",
@@ -40,7 +46,7 @@ module.exports.deleteCache = (userId) => {
         if (err) {
             console.log("eroor");
         } else {
-            console.log("deleted", data)
+            console.log("deleted", data);
         }
     })
 }

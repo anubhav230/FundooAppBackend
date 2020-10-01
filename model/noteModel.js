@@ -41,7 +41,7 @@ module.exports.noteModel = db.sequelize.define('notes', {
  * @description for saving note details in database
  * @param {userData} userData 
  */
-module.exports.getNote = (userData) => {
+module.exports.createNote = (userData) => {
     console.log(userData)
     return new Promise((resolve, reject) => {
         this.noteModel.create(userData) //create method of sequelize
@@ -73,7 +73,7 @@ module.exports.getAllNote = (userId) => {
  */
 module.exports.UpdateNote = (notData, noteId) => {
     return new Promise((resolve, reject) => {
-        this.noteModel.update({ description: notData }, { where: { note_id: noteId } })
+        this.noteModel.update({ description: notData }, { where: { id: noteId } })
             .then(data => {
                 resolve(data)
             })
@@ -105,7 +105,7 @@ module.exports.delete = (note_id) => {
             .then((data) => {
                 if (data.length != 0) {
                     this.noteModel.destroy({ // If Present then delete by note id it using destroy() of sequelize
-                            where: { note_id: note_id }
+                            where: { id: note_id }
                         })
                         .then(result => {
                             resolve(result)

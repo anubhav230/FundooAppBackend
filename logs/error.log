@@ -1,0 +1,290 @@
+{"message":"note creation failed","level":"error","timestamp":"2020-09-27T23:37:48.169Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-27T23:39:45.354Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-27T23:40:09.176Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-27T23:41:37.674Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-27T23:41:37.693Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-27T23:44:04.019Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-27T23:44:04.023Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-27T23:44:55.355Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-27T23:44:55.367Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-27T23:45:02.958Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-27T23:45:02.961Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-27T23:45:07.449Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-27T23:45:07.462Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-27T23:45:10.549Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-27T23:45:10.568Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-27T23:45:11.100Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-27T23:45:11.114Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-27T23:45:15.838Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-27T23:45:15.850Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-27T23:47:30.528Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-27T23:47:30.536Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-27T23:48:01.372Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-27T23:48:01.380Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-27T23:48:26.174Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-27T23:48:26.183Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-27T23:48:56.656Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-27T23:49:31.509Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T07:20:07.642Z"}
+{"message":"updetion failed. SequelizeDatabaseError: invalid input syntax for integer: \"Ankit's notes\"","level":"error","timestamp":"2020-09-28T07:20:07.836Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T07:20:36.757Z"}
+{"message":"deletion failed. Some issue in deleting the noteTypeError: note.delete is not a function","level":"error","timestamp":"2020-09-28T07:30:11.469Z"}
+{"message":"deletion failed. Some issue in deleting the noteerror: ReferenceError: noteid is not defined","level":"error","timestamp":"2020-09-28T07:30:50.576Z"}
+{"message":"deletion failed. Some issue in deleting the noteerror: TypeError: this.findNote is not a function","level":"error","timestamp":"2020-09-28T07:31:16.038Z"}
+{"message":"deletion failed. Some issue in deleting the noteerror: TypeError: this.noteModel.findNote is not a function","level":"error","timestamp":"2020-09-28T07:31:39.566Z"}
+{"message":"deletion failed. Some issue in deleting the noteerror: ReferenceError: noteModel is not defined","level":"error","timestamp":"2020-09-28T07:33:55.813Z"}
+{"message":"deletion failed. Some issue in deleting the noteerror: Sorry no such note found","level":"error","timestamp":"2020-09-28T07:35:36.892Z"}
+{"message":"deletion failed. Some issue in deleting the noteerror: Sorry no such note found: ","level":"error","timestamp":"2020-09-28T07:37:05.417Z"}
+{"message":"deletion failed. Some issue in deleting the noteerror: Sorry no such note found: ","level":"error","timestamp":"2020-09-28T07:38:16.703Z"}
+{"message":"deletion failed. Some issue in deleting the noteerror: Sorry no such note found: ","level":"error","timestamp":"2020-09-28T07:38:52.548Z"}
+{"message":"deletion failed. Some issue in deleting the noteerror: Sorry no such note found: ","level":"error","timestamp":"2020-09-28T07:39:19.571Z"}
+{"message":"deletion failed. Some issue in deleting the noteerror: Sorry no such note found: ","level":"error","timestamp":"2020-09-28T07:39:39.272Z"}
+{"message":"deletion failed. Some issue in deleting the noteerror: Sorry Some issue come in deleting the note: ","level":"error","timestamp":"2020-09-28T07:39:57.250Z"}
+{"message":"deletion failed. Some issue in deleting the noteerror: Sorry Some issue come in deleting the note: ","level":"error","timestamp":"2020-09-28T07:41:24.194Z"}
+{"message":"deletion failed. Some issue in deleting the noteerror: SequelizeDatabaseError: column \"notei_d\" does not exist","level":"error","timestamp":"2020-09-28T07:41:52.587Z"}
+{"message":"deletion failed. Some issue in deleting the noteerror: Sorry Some issue come in deleting the note: ","level":"error","timestamp":"2020-09-28T07:42:15.384Z"}
+{"message":"deletion failed. Some issue in deleting the noteerror: Sorry Some issue come in deleting the note: ","level":"error","timestamp":"2020-09-28T07:42:28.181Z"}
+{"message":"invalid token or token has expired","level":"error","timestamp":"2020-09-28T10:46:07.559Z"}
+{"message":"invalid token or token has expired","level":"error","timestamp":"2020-09-28T21:19:26.562Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T21:25:37.192Z"}
+{"message":"Some issue in reading notes","level":"error","timestamp":"2020-09-28T21:25:37.403Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T21:26:23.606Z"}
+{"message":"Some issue in reading notes","level":"error","timestamp":"2020-09-28T21:26:23.749Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T21:27:00.367Z"}
+{"message":"Some issue in reading notes","level":"error","timestamp":"2020-09-28T21:27:00.538Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T21:27:52.068Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T21:28:06.762Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T21:28:50.413Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T21:30:08.387Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T21:30:52.774Z"}
+{"message":"Some issue in reading notes","level":"error","timestamp":"2020-09-28T21:30:53.031Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T21:31:33.171Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T22:06:19.168Z"}
+{"message":"Some issue in reading notes","level":"error","timestamp":"2020-09-28T22:06:19.454Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T22:07:12.777Z"}
+{"message":"Some issue in reading notes","level":"error","timestamp":"2020-09-28T22:07:12.916Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T22:13:37.670Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T22:13:43.945Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T22:13:47.758Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T22:13:52.231Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T22:14:04.647Z"}
+{"message":"Some issue in reading notes","level":"error","timestamp":"2020-09-28T22:14:04.789Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T22:19:01.446Z"}
+{"message":"Some issue in reading notes","level":"error","timestamp":"2020-09-28T22:19:01.686Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T22:19:51.766Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T22:20:03.238Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T22:20:25.221Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T22:28:51.088Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T22:51:45.509Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T23:12:57.647Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T23:13:29.349Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T23:14:25.261Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T23:18:05.937Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-28T23:18:44.584Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-29T06:18:09.590Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-29T06:18:20.180Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-29T06:29:07.248Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-29T06:29:35.867Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-29T06:30:00.693Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-29T06:30:20.297Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-29T06:31:53.644Z"}
+{"message":"Some issue in reading notes","level":"error","timestamp":"2020-09-29T06:31:53.903Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-29T06:32:48.901Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-29T06:33:02.446Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-29T06:33:26.298Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-29T06:33:52.794Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-29T06:34:09.226Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-29T06:34:13.355Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-29T06:35:05.934Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-29T06:35:08.938Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-29T06:49:10.154Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-29T06:50:01.949Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-29T06:50:36.376Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-29T06:50:37.996Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-29T07:18:18.177Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-29T07:18:37.436Z"}
+{"message":"invalid token or token has expired","level":"error","timestamp":"2020-09-29T07:25:42.079Z"}
+{"message":"invalid token or token has expired","level":"error","timestamp":"2020-09-29T07:25:48.957Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-29T07:33:04.108Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-29T07:33:13.000Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-29T08:14:59.290Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-29T08:15:46.720Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-29T18:40:09.521Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-29T18:40:48.590Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-29T18:42:43.370Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-29T20:58:27.776Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-29T20:58:27.779Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-29T21:01:41.480Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-29T21:01:41.483Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-29T21:01:46.191Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-29T21:01:46.192Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-29T21:01:53.471Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-29T21:27:40.071Z"}
+{"message":"Some issue in reading notes","level":"error","timestamp":"2020-09-29T21:27:40.232Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-29T21:28:02.395Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-29T21:39:55.683Z"}
+{"message":"Some issue in reading notes","level":"error","timestamp":"2020-09-29T21:39:55.893Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-29T21:40:45.059Z"}
+{"message":"Some issue in reading notes","level":"error","timestamp":"2020-09-29T21:40:45.194Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-29T21:42:05.729Z"}
+{"message":"Some issue in reading notes","level":"error","timestamp":"2020-09-29T21:42:05.745Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-29T21:45:46.663Z"}
+{"message":"Some issue in reading notes","level":"error","timestamp":"2020-09-29T21:45:46.678Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-29T21:48:57.479Z"}
+{"message":"Some issue in reading notes","level":"error","timestamp":"2020-09-29T21:48:57.499Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-29T21:49:24.598Z"}
+{"message":"Some issue in reading notes","level":"error","timestamp":"2020-09-29T21:49:24.616Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-29T21:49:45.008Z"}
+{"message":"Some issue in reading notes","level":"error","timestamp":"2020-09-29T21:49:45.025Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-29T21:50:00.291Z"}
+{"message":"Some issue in reading notes","level":"error","timestamp":"2020-09-29T21:50:00.430Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-29T21:51:15.998Z"}
+{"message":"Some issue in reading notes","level":"error","timestamp":"2020-09-29T21:51:16.128Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-29T21:54:11.007Z"}
+{"message":"Some issue in reading notes","level":"error","timestamp":"2020-09-29T21:54:11.169Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-29T21:54:43.801Z"}
+{"message":"Some issue in reading notes: ","level":"error","timestamp":"2020-09-29T21:54:44.040Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-29T21:54:48.860Z"}
+{"message":"Some issue in reading notes: ","level":"error","timestamp":"2020-09-29T21:54:48.995Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-29T21:54:57.739Z"}
+{"message":"Some issue in reading notes: ","level":"error","timestamp":"2020-09-29T21:54:57.972Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-29T21:55:26.882Z"}
+{"message":"Some issue in reading notes: ","level":"error","timestamp":"2020-09-29T21:55:26.957Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-29T21:55:58.629Z"}
+{"message":"Some issue in reading notes: ","level":"error","timestamp":"2020-09-29T21:55:58.762Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-29T21:56:23.288Z"}
+{"message":"Some issue in reading notes: ","level":"error","timestamp":"2020-09-29T21:56:23.525Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-29T21:57:04.165Z"}
+{"message":"Some issue in reading notes: ","level":"error","timestamp":"2020-09-29T21:57:04.287Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-29T21:57:34.094Z"}
+{"message":"Some issue in reading notes: ","level":"error","timestamp":"2020-09-29T21:57:34.228Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-29T21:57:41.211Z"}
+{"message":"Some issue in reading notes: ","level":"error","timestamp":"2020-09-29T21:57:41.227Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-29T21:57:48.372Z"}
+{"message":"Some issue in reading notes: ","level":"error","timestamp":"2020-09-29T21:57:48.507Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-29T21:58:44.378Z"}
+{"message":"Some issue in reading notes: ","level":"error","timestamp":"2020-09-29T21:58:44.511Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-29T21:59:20.947Z"}
+{"message":"Some issue in reading notes: ","level":"error","timestamp":"2020-09-29T21:59:21.058Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-29T22:00:09.401Z"}
+{"message":"Some issue in reading notes: ","level":"error","timestamp":"2020-09-29T22:00:09.614Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-29T22:00:59.922Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-29T22:01:47.395Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-29T22:03:21.588Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-29T22:05:39.773Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-29T22:05:51.850Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-29T22:06:28.480Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T07:07:58.350Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-30T07:07:58.564Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T07:13:44.752Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-30T07:13:44.792Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T07:14:39.669Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-30T07:14:39.810Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T07:15:30.266Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-30T07:15:30.384Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T07:15:59.228Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-30T07:15:59.274Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T07:16:50.062Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-30T07:16:50.106Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T07:17:18.681Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T07:18:32.459Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T07:19:42.954Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T07:20:41.462Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T07:23:23.462Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T07:26:28.591Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T07:27:20.958Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T07:29:29.934Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T07:30:03.312Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T07:30:08.457Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T07:30:24.343Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T07:32:52.138Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T07:33:00.594Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T07:33:06.779Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T07:33:41.137Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T07:33:58.821Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T07:34:05.374Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T07:35:20.568Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T07:35:25.364Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T07:35:45.899Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T07:35:57.665Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T07:37:14.381Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T07:37:40.211Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T07:37:52.726Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T07:38:04.593Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T07:38:43.765Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T07:40:36.298Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T07:45:36.829Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T07:46:39.022Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T07:46:46.567Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T07:47:04.965Z"}
+{"message":"Some issue in reading notes: ","level":"error","timestamp":"2020-09-30T07:47:05.084Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T07:47:20.982Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T07:47:25.258Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T07:47:46.356Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T07:47:50.929Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T07:49:27.859Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T07:51:01.223Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T07:51:13.022Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T07:51:37.689Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T07:51:46.949Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T08:02:20.549Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T08:07:29.072Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T08:07:45.393Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T08:07:58.457Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T08:08:15.601Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T08:08:26.785Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T08:08:35.672Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T08:08:48.788Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T08:11:50.705Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T08:16:50.830Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T08:16:57.647Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T08:19:04.098Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T08:19:09.849Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-30T08:19:10.102Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T08:20:38.128Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T08:20:47.112Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T08:20:54.828Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T08:24:49.808Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-30T08:24:49.897Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T08:25:10.084Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-30T08:25:10.098Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T08:25:33.992Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-30T08:25:34.007Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T08:32:03.948Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-30T08:32:03.970Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T08:32:28.098Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-30T08:32:28.107Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T08:33:45.641Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-30T08:33:45.657Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T08:34:37.115Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T08:35:14.647Z"}
+{"message":"Some issue in reading notes: ","level":"error","timestamp":"2020-09-30T08:35:14.711Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T08:35:49.542Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T08:35:55.628Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T08:39:03.077Z"}
+{"message":"login token has verified","level":"error","timestamp":"2020-09-30T08:51:19.350Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-30T09:52:13.372Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-30T09:52:53.827Z"}
+{"message":"note creation failed","level":"error","timestamp":"2020-09-30T09:53:58.564Z"}
+{"message":"invalid token or token has expired","level":"error","timestamp":"2020-09-30T09:55:19.192Z"}
+{"message":"invalid token or token has expired","level":"error","timestamp":"2020-09-30T09:55:34.127Z"}
+{"message":"invalid token or token has expired","level":"error","timestamp":"2020-09-30T09:55:38.168Z"}
+{"message":"No token provided...","level":"error","timestamp":"2020-09-30T09:55:57.815Z"}
+{"message":"No token provided...","level":"error","timestamp":"2020-10-01T02:46:29.712Z"}
+{"message":"No token provided...","level":"error","timestamp":"2020-10-01T02:46:48.542Z"}
+{"message":"No token provided...","level":"error","timestamp":"2020-10-01T02:47:59.598Z"}
+{"message":"No token provided...","level":"error","timestamp":"2020-10-01T02:48:42.487Z"}
+{"message":"No token provided...","level":"error","timestamp":"2020-10-01T02:49:23.327Z"}
+{"message":"No token provided...","level":"error","timestamp":"2020-10-01T02:49:39.483Z"}
+{"message":"No token provided...","level":"error","timestamp":"2020-10-01T02:50:02.942Z"}
+{"message":"No token provided...","level":"error","timestamp":"2020-10-01T02:50:13.861Z"}
+{"message":"No token provided...","level":"error","timestamp":"2020-10-01T02:52:17.847Z"}
+{"message":"No token provided...","level":"error","timestamp":"2020-10-01T02:52:36.276Z"}
+{"message":"No token provided...","level":"error","timestamp":"2020-10-01T02:52:56.508Z"}
+{"message":"No token provided...","level":"error","timestamp":"2020-10-01T02:52:57.232Z"}
+{"message":"No token provided...","level":"error","timestamp":"2020-10-01T02:53:06.794Z"}
+{"message":"No token provided...","level":"error","timestamp":"2020-10-01T02:53:07.344Z"}
+{"message":"No token provided...","level":"error","timestamp":"2020-10-01T02:53:07.674Z"}
+{"message":"No token provided...","level":"error","timestamp":"2020-10-01T02:53:08.020Z"}
+{"message":"No token provided...","level":"error","timestamp":"2020-10-01T02:53:54.603Z"}
+{"message":"No token provided...","level":"error","timestamp":"2020-10-01T02:54:02.391Z"}

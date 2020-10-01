@@ -17,9 +17,9 @@ module.exports.tokenVerify = (req, res, next) => {
                     message: 'Token is not valid'
                 });
             } else {
-                logger.error('login token has verified')
+                logger.info('login token has verified')
                 console.log("verified")
-                req.decoded = decoded.user_id;
+                req.decoded = decoded.id;
                 next();
             }
         });

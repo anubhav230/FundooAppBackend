@@ -83,9 +83,6 @@ module.exports = class fundooController {
                 res.json({ message: 'undefined passwordt' });
                 throw new Error('undefined password')
             }
-            const email = req.body.email
-            const password = req.body.password
-                //userService.userlogin(email, password)
             userService.userlogin(req.body)
                 .then(result => {
                     response.message = 'Successfully Logged In';
