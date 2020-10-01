@@ -1,5 +1,5 @@
-const user = require('../controller/users')
-const note = require('../controller/notes')
+const user = require('../controller/usersController')
+const note = require('../controller/notesController')
 const tokenVerify = require('../middleware/authentication').tokenVerify
 const { check } = require('express-validator');
 const checkCache = require('../middleware/checkCache')
@@ -25,4 +25,6 @@ module.exports = (app) => {
     app.post('/get-note', tokenVerify, checkCache.checkCache, noteController.readAllNote)
     app.put('/update-note', tokenVerify, noteController.updateNote)
     app.delete('/delete-note', tokenVerify, noteController.deleteNote)
+
+    app.post('/createlabel', )
 }

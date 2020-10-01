@@ -1,5 +1,5 @@
 const { pool } = require('../dbConfig/dbConfig')
-const user = require('../service/user')
+const user = require('../service/userService')
 const { check, validationResult } = require('express-validator');
 
 const userService = new user();

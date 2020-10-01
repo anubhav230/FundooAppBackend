@@ -1,5 +1,5 @@
 const { pool } = require('../dbConfig/dbConfig');
-const note = require('../service/note');
+const note = require('../service/noteService');
 const logger = require('../dbConfig/logger')
 const cache = require('../middleware/checkCache')
 const noteService = new note();
@@ -97,15 +97,6 @@ module.exports = class Note {
             'success': false
         };
         try {
-            let notObj = {
-                title: req.body.title,
-                description: req.body.description,
-                is_pinned: req.body.is_pined,
-                remainder: req.body.remainder,
-                noteColor: req.body.noteColor,
-                is_archived: req.body.is_archived,
-                is_delete: req.body.is_delete,
-            }
             let notedata = req.body.description
             let noteId = req.body.id
             noteService.updateNote(notedata, noteId)
