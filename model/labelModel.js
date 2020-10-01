@@ -1,26 +1,30 @@
 const sequelize = require('sequelize');
 const db = require('../dbConfig/dbConfig');
 
-var noteModel = db.sequelize.define('labels', {
+module.exports.labelModel = db.sequelize.define('labels', {
 
-    label: {
+    labelName: {
         type: sequelize.STRING,
         defaultValue: null
     },
-    createdAt: {
-        type: sequelize.NOW,
-        defaultValue: Sequelize.NOW
-    },
-    updatedAt: {
-        type: sequelize.NOW,
-        defaultValue: Sequelize.NOW
-    },
-    noteId: {
-        type: sequelize.INTEGER,
+    userId: {
+        type: sequelize.INTEGER
     }
-
 });
 
-class LableOperetions {
+// module.exports = class LableOperetions {
 
-}
+module.exports.createLabel = (labelData) => {
+        console.log(labelData)
+        console.log('//////////from labelmodel')
+        return new Promise((resolve, reject) => {
+            this.labelModel.create(labelData) //create method of sequelize
+                .then(user => {
+                    resolve(user)
+                })
+                .catch(err => {
+                    reject(err)
+                });
+        });
+    }
+    // }

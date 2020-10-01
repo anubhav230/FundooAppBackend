@@ -29,5 +29,5 @@ module.exports = (app) => {
     app.delete('/delete-note', tokenVerify, noteController.deleteNote)
 
     /****routes for notes****/
-    app.post('/createlabel', lableController.createLable)
+    app.post('/create-label', tokenVerify, lableController.createLable)
 }

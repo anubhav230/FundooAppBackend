@@ -1,6 +1,5 @@
 const Sequelize = require("sequelize")
 const db = {}
-
 const sequelize = new Sequelize('fundooApp', 'postgres', 'root', {
     host: 'localhost',
     dialect: 'postgres',

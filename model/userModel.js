@@ -1,4 +1,3 @@
-const { Cipher } = require('crypto');
 const sequelize = require('sequelize');
 const db = require('../dbConfig/dbConfig')
 const bcrypt = require("bcrypt")

@@ -1,4 +1,4 @@
-const user = require('../model/userModel');
+const Lable = require('../controller/labelController');
 const note = require('../model/noteModel');
 
 
@@ -9,7 +9,7 @@ module.exports = class NoteService {
      */
     createNote(noteData) {
         return new Promise((resolve, reject) => {
-            note.createNote(noteData)
+            Lable.createNote(noteData)
                 .then(noteData => {
                     resolve(noteData)
                 })
