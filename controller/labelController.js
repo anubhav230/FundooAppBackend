@@ -4,6 +4,11 @@ const lable = require('../service/labelService');
 const labelService = new lable();
 module.exports = class Lable {
 
+    /**
+     * @description controller for creating labels
+     * @param {req} req 
+     * @param {res} res 
+     */
     createLable(req, res) {
         let response = {
             'message': 'Something bad happend',
@@ -33,6 +38,11 @@ module.exports = class Lable {
         }
     }
 
+    /**
+     * @description controller for getting all labels
+     * @param {req} req 
+     * @param {res} res 
+     */
     getLabel(req, res) {
         let response = {
             'message': 'Something bad happend',
@@ -59,6 +69,11 @@ module.exports = class Lable {
         }
     }
 
+    /**
+     * @description controller for deleting  labels
+     * @param {req} req 
+     * @param {res} res 
+     */
     deleteLabel(req, res) {
         let response = {
             'message': 'Something bad happend',
@@ -85,6 +100,11 @@ module.exports = class Lable {
         }
     }
 
+    /**
+     * @description controller for updating labels
+     * @param {req} req 
+     * @param {res} res 
+     */
     updateLabel(req, res) {
         let response = {
             'message': 'Something bad happend',

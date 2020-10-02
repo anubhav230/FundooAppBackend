@@ -20,7 +20,10 @@ module.exports.labelModel = db.sequelize.define('labels', {
     }
 });
 
-
+/**
+ * @description fuction for creating label
+ * @param {labelData} labelData 
+ */
 module.exports.createLabel = (labelData) => {
     return new Promise((resolve, reject) => {
         this.labelModel.create(labelData) //create method of sequelize
@@ -33,6 +36,10 @@ module.exports.createLabel = (labelData) => {
     });
 }
 
+/**
+ * @description function for get all labels
+ * @param {userId} userId 
+ */
 module.exports.readLabel = (userId) => {
     return this.labelModel.findAll({
         where: {
@@ -41,7 +48,10 @@ module.exports.readLabel = (userId) => {
     });
 }
 
-
+/**
+ * @description fuction for finding a label
+ * @param {labelId} labelId 
+ */
 module.exports.findlebal = (labelId) => {
     return this.labelModel.findOne({
         where: {
@@ -50,6 +60,11 @@ module.exports.findlebal = (labelId) => {
     });
 }
 
+/**
+ * @description function for updating label
+ * @param {labelName} labelName 
+ * @param {id} id 
+ */
 module.exports.updateLabel = (labelName, id) => {
     return new Promise((resolve, reject) => {
         this.labelModel.update({ labelName: labelName }, { where: { id: id } })
@@ -62,6 +77,10 @@ module.exports.updateLabel = (labelName, id) => {
     });
 }
 
+/**
+ * @description fuction for deleting a label
+ * @param {labelId} labelId 
+ */
 module.exports.delete = (labelId) => {
     return new Promise((resolve, reject) => {
         this.findlebal(labelId) // Check requested note is present or not in db
