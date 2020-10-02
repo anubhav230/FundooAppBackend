@@ -38,5 +38,17 @@ module.exports = class Lable {
         });
     }
 
+    deleteNote(bodydata) {
+        return new Promise((resolve, reject) => {
+            //console.log(bodydata.id)
+            label.delete(bodydata.id)
+                .then(data => {
+                    resolve(data)
+                })
+                .catch(err => {
+                    reject('error: ' + err)
+                })
+        });
+    }
 
 }

@@ -84,4 +84,31 @@ module.exports = class Lable {
             res.status(400).send(response);
         }
     }
+
+    updateLabel(req, res) {
+        let response = {
+            'message': 'Something bad happend',
+            'success': false
+        };
+        try {
+            let labelName = req.body.labelName;
+            let id = req.body.id
+            console.log(req.body.labelName)
+            labelService.updateLabel(labelName, id)
+                .then(() => {
+                    logger.info("congrats You Are Successsfully updated the label");
+                    response.message = 'Successfully updated';
+                    response.success = true;
+                    res.status(200).send(response);
+                })
+                .catch(err => {
+                    response.message = 'updetion failed. ' + err;
+                    logger.error(response.message);
+                    res.status(400).send(response);
+                })
+        } catch (error) {
+            logger.error(response.message + error);
+            res.send(response);
+        }
+    }
 }
