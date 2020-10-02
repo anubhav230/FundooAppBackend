@@ -451,3 +451,59 @@
 {"message":"congrats You Are Successsfully read all labels......","level":"info","timestamp":"2020-10-01T21:43:31.004Z"}
 {"message":"login token has verified","level":"info","timestamp":"2020-10-01T22:03:18.721Z"}
 {"message":"congrats You Are Successsfully read all labels......","level":"info","timestamp":"2020-10-01T22:03:18.967Z"}
+{"message":"login token has verified","level":"info","timestamp":"2020-10-01T22:16:07.302Z"}
+{"message":"label creation failed","level":"error","timestamp":"2020-10-01T22:16:07.515Z"}
+{"message":"login token has verified","level":"info","timestamp":"2020-10-01T22:16:45.683Z"}
+{"message":"label creation failed","level":"error","timestamp":"2020-10-01T22:16:45.787Z"}
+{"message":"login token has verified","level":"info","timestamp":"2020-10-01T22:16:55.529Z"}
+{"message":"congrats You Are Successsfully created the label","level":"info","timestamp":"2020-10-01T22:16:55.744Z"}
+{"message":"login token has verified","level":"info","timestamp":"2020-10-01T22:52:52.168Z"}
+{"message":"label creation failed","level":"error","timestamp":"2020-10-01T22:52:52.294Z"}
+{"message":"login token has verified","level":"info","timestamp":"2020-10-01T22:53:10.527Z"}
+{"message":"congrats You Are Successsfully created the label","level":"info","timestamp":"2020-10-01T22:53:10.722Z"}
+{"message":"login token has verified","level":"info","timestamp":"2020-10-02T05:50:36.257Z"}
+{"message":"congrats You Are Successsfully read all labels......","level":"info","timestamp":"2020-10-02T05:50:36.442Z"}
+{"message":"login token has verified","level":"info","timestamp":"2020-10-02T05:51:52.132Z"}
+{"message":"congrats You Are Successsfully read all labels......","level":"info","timestamp":"2020-10-02T05:51:52.370Z"}
+{"message":"login token has verified","level":"info","timestamp":"2020-10-02T05:52:01.471Z"}
+{"message":"deletion failed. Some issue in deleting the labelerror: TypeError: this.findNote is not a function","level":"error","timestamp":"2020-10-02T05:52:01.483Z"}
+{"message":"login token has verified","level":"info","timestamp":"2020-10-02T05:58:37.854Z"}
+{"message":"deletion failed. Some issue in deleting the labelerror: TypeError: this.findNote is not a function","level":"error","timestamp":"2020-10-02T05:58:37.861Z"}
+{"message":"login token has verified","level":"info","timestamp":"2020-10-02T06:13:26.245Z"}
+{"message":"deletion failed. Some issue in deleting the labelerror: TypeError: this.findNote is not a function","level":"error","timestamp":"2020-10-02T06:13:26.258Z"}
+{"message":"login token has verified","level":"info","timestamp":"2020-10-02T06:14:51.182Z"}
+{"message":"deletion failed. Some issue in deleting the labelerror: TypeError: Cannot read property 'findOne' of undefined","level":"error","timestamp":"2020-10-02T06:14:51.192Z"}
+{"message":"login token has verified","level":"info","timestamp":"2020-10-02T06:15:17.732Z"}
+{"message":"deletion failed. Some issue in deleting the labelerror: TypeError: Cannot read property 'findOne' of undefined","level":"error","timestamp":"2020-10-02T06:15:17.743Z"}
+{"message":"login token has verified","level":"info","timestamp":"2020-10-02T06:15:31.895Z"}
+{"message":"deletion failed. Some issue in deleting the labelerror: Sorry no such label found: ","level":"error","timestamp":"2020-10-02T06:15:32.058Z"}
+{"message":"login token has verified","level":"info","timestamp":"2020-10-02T06:15:42.142Z"}
+{"message":"Successsfully deleted the label","level":"info","timestamp":"2020-10-02T06:15:42.302Z"}
+{"message":"login token has verified","level":"info","timestamp":"2020-10-02T06:49:29.019Z"}
+{"message":"congrats You Are Successsfully created the label","level":"info","timestamp":"2020-10-02T06:49:29.295Z"}
+{"message":"login token has verified","level":"info","timestamp":"2020-10-02T06:49:56.351Z"}
+{"message":"congrats You Are Successsfully created the label","level":"info","timestamp":"2020-10-02T06:49:56.445Z"}
+{"message":"login token has verified","level":"info","timestamp":"2020-10-02T06:50:17.374Z"}
+{"message":"congrats You Are Successsfully created the label","level":"info","timestamp":"2020-10-02T06:50:17.470Z"}
+{"message":"login token has verified","level":"info","timestamp":"2020-10-02T06:51:34.914Z"}
+{"message":"congrats You Are Successsfully read all labels......","level":"info","timestamp":"2020-10-02T06:51:35.029Z"}
+{"message":"login token has verified","level":"info","timestamp":"2020-10-02T06:52:22.241Z"}
+{"message":"Successsfully deleted the label","level":"info","timestamp":"2020-10-02T06:52:22.357Z"}
+{"message":"login token has verified","level":"info","timestamp":"2020-10-02T06:52:40.961Z"}
+{"message":"Successsfully deleted the label","level":"info","timestamp":"2020-10-02T06:52:41.088Z"}
+{"message":"login token has verified","level":"info","timestamp":"2020-10-02T06:52:49.259Z"}
+{"message":"Successsfully deleted the label","level":"info","timestamp":"2020-10-02T06:52:49.291Z"}
+{"message":"login token has verified","level":"info","timestamp":"2020-10-02T22:14:35.850Z"}
+{"message":"updetion failed. ReferenceError: note is not defined","level":"error","timestamp":"2020-10-02T22:14:35.856Z"}
+{"message":"login token has verified","level":"info","timestamp":"2020-10-02T22:15:14.040Z"}
+{"message":"congrats You Are Successsfully updated the label","level":"info","timestamp":"2020-10-02T22:15:14.054Z"}
+{"message":"login token has verified","level":"info","timestamp":"2020-10-02T22:15:43.916Z"}
+{"message":"congrats You Are Successsfully updated the label","level":"info","timestamp":"2020-10-02T22:15:43.928Z"}
+{"message":"login token has verified","level":"info","timestamp":"2020-10-02T22:16:27.314Z"}
+{"message":"congrats You Are Successsfully updated the label","level":"info","timestamp":"2020-10-02T22:16:27.329Z"}
+{"message":"login token has verified","level":"info","timestamp":"2020-10-02T22:16:35.347Z"}
+{"message":"congrats You Are Successsfully updated the label","level":"info","timestamp":"2020-10-02T22:16:35.367Z"}
+{"message":"login token has verified","level":"info","timestamp":"2020-10-02T22:16:38.386Z"}
+{"message":"congrats You Are Successsfully updated the label","level":"info","timestamp":"2020-10-02T22:16:38.389Z"}
+{"message":"login token has verified","level":"info","timestamp":"2020-10-02T22:16:52.554Z"}
+{"message":"congrats You Are Successsfully updated the label","level":"info","timestamp":"2020-10-02T22:16:52.764Z"}

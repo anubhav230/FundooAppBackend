@@ -53,7 +53,35 @@ module.exports = class Lable {
                     res.status(400).send(response);
                 })
         } catch (error) {
+            response.message = "Some issue in reading label: " + error
+            logger.error(response.message)
+            res.status(400).send(response);
+        }
+    }
 
+    deleteLabel(req, res) {
+        let response = {
+            'message': 'Something bad happend',
+            'success': false
+        };
+        //console.log(req.body.id)
+        try {
+            labelService.deleteNote(req.body)
+                .then(() => {
+                    logger.info("Successsfully deleted the label");
+                    response.message = 'Successfully deleted';
+                    response.success = true;
+                    res.status(200).send(response);
+                })
+                .catch(err => {
+                    response.message = 'deletion failed. Some issue in deleting the label';
+                    logger.error(response.message + err)
+                    res.status(400).send(response);
+                })
+        } catch (error) {
+            response.message = "Some issue in deleting label: " + error
+            logger.error(response.message)
+            res.status(400).send(response);
         }
     }
 }

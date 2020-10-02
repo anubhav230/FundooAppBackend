@@ -34,7 +34,7 @@ module.exports.noteModel = db.sequelize.define('notes', {
     userId: {
         type: sequelize.STRING,
         allowNull: false
-    }
+    } /////labelid
 });
 
 /**

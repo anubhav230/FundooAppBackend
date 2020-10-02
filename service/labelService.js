@@ -26,4 +26,17 @@ module.exports = class Lable {
         })
     }
 
+    updateLabel(labelName, id) {
+        return new Promise((resolve, reject) => {
+            label.updateLabel(labelName, id)
+                .then(data => {
+                    resolve(data)
+                })
+                .catch(error => {
+                    reject(error)
+                })
+        });
+    }
+
+
 }

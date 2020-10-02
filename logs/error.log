@@ -300,3 +300,13 @@
 {"message":"label creation failed","level":"error","timestamp":"2020-10-01T20:21:58.692Z"}
 {"message":"label creation failed","level":"error","timestamp":"2020-10-01T20:23:31.534Z"}
 {"message":"Some issue in reading labels: ","level":"error","timestamp":"2020-10-01T21:40:08.478Z"}
+{"message":"label creation failed","level":"error","timestamp":"2020-10-01T22:16:07.515Z"}
+{"message":"label creation failed","level":"error","timestamp":"2020-10-01T22:16:45.787Z"}
+{"message":"label creation failed","level":"error","timestamp":"2020-10-01T22:52:52.295Z"}
+{"message":"deletion failed. Some issue in deleting the labelerror: TypeError: this.findNote is not a function","level":"error","timestamp":"2020-10-02T05:52:01.483Z"}
+{"message":"deletion failed. Some issue in deleting the labelerror: TypeError: this.findNote is not a function","level":"error","timestamp":"2020-10-02T05:58:37.862Z"}
+{"message":"deletion failed. Some issue in deleting the labelerror: TypeError: this.findNote is not a function","level":"error","timestamp":"2020-10-02T06:13:26.259Z"}
+{"message":"deletion failed. Some issue in deleting the labelerror: TypeError: Cannot read property 'findOne' of undefined","level":"error","timestamp":"2020-10-02T06:14:51.192Z"}
+{"message":"deletion failed. Some issue in deleting the labelerror: TypeError: Cannot read property 'findOne' of undefined","level":"error","timestamp":"2020-10-02T06:15:17.744Z"}
+{"message":"deletion failed. Some issue in deleting the labelerror: Sorry no such label found: ","level":"error","timestamp":"2020-10-02T06:15:32.058Z"}
+{"message":"updetion failed. ReferenceError: note is not defined","level":"error","timestamp":"2020-10-02T22:14:35.856Z"}

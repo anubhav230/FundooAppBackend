@@ -19,16 +19,18 @@ module.exports = (app) => {
     app.post('/login', controller.login);
     app.post('/forgot-password', controller.forgotPassword);
     app.put('/reset-password', [check('password', 'min 6 char').isLength({ min: 6 })], controller.resetPassword);
-    app.post('/email-verifyToken', controller.emailVerifyToken)
-    app.post('/verify-email', controller.mailverify)
+    app.post('/email-verifyToken', controller.emailVerifyToken);
+    app.post('/verify-email', controller.mailverify);
 
     /****routes for notes****/
-    app.post('/create-note', tokenVerify, noteController.createNote)
-    app.post('/get-note', tokenVerify, checkCache.checkCache, noteController.readAllNote)
-    app.put('/update-note', tokenVerify, noteController.updateNote)
-    app.delete('/delete-note', tokenVerify, noteController.deleteNote)
+    app.post('/create-note', tokenVerify, noteController.createNote);
+    app.post('/get-note', tokenVerify, checkCache.checkCache, noteController.readAllNote);
+    app.put('/update-note', tokenVerify, noteController.updateNote);
+    app.delete('/delete-note', tokenVerify, noteController.deleteNote);
 
     /****routes for notes****/
-    app.post('/create-label', tokenVerify, lableController.createLable)
-    app.post('/get-label', tokenVerify, lableController.getLabel)
+    app.post('/create-label', tokenVerify, lableController.createLable);
+    app.post('/get-label', tokenVerify, lableController.getLabel);
+    app.delete('/delete-label', tokenVerify, lableController.deleteLabel);
+    // app.put('/update-label', tokenVerify, lableController.updateLabel);
 }
