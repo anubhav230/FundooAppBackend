@@ -1,4 +1,5 @@
 const label = require('../model/labelModel');
+const noteModel = require('../model/noteModel');
 
 module.exports = class Lable {
 
@@ -59,6 +60,19 @@ module.exports = class Lable {
         return new Promise((resolve, reject) => {
             //console.log(bodydata.id)
             label.delete(bodydata.id)
+                .then(data => {
+                    resolve(data)
+                })
+                .catch(err => {
+                    reject('error: ' + err)
+                })
+        });
+    }
+
+    allLabel(labelId, noteId) {
+        return new Promise((resolve, reject) => {
+            //console.log(bodydata.id)
+            noteModel.updateLabel(labelId, noteId)
                 .then(data => {
                     resolve(data)
                 })

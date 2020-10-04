@@ -34,7 +34,11 @@ module.exports.noteModel = db.sequelize.define('notes', {
     userId: {
         type: sequelize.STRING,
         allowNull: false
-    } /////labelid
+    },
+    labelId: {
+        type: sequelize.INTEGER,
+        defaultValue: null
+    }
 });
 
 /**
@@ -121,4 +125,16 @@ module.exports.delete = (note_id) => {
                 reject("Sorry no such note found: ", err)
             })
     })
+}
+
+module.exports.updateLabel = (labelId, noteId) => {
+    return new Promise((resolve, reject) => {
+        this.noteModel.update({ labelId: labelId }, { where: { id: noteId } })
+            .then(data => {
+                resolve(data)
+            })
+            .catch(err => {
+                reject(err)
+            })
+    });
 }

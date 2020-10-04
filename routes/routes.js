@@ -33,4 +33,5 @@ module.exports = (app) => {
     app.post('/get-label', tokenVerify, lableController.getLabel);
     app.delete('/delete-label', tokenVerify, lableController.deleteLabel);
     app.put('/update-label', tokenVerify, lableController.updateLabel);
+    app.put('/add-label', tokenVerify, lableController.addLabel);
 }

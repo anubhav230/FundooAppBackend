@@ -2,7 +2,7 @@ const User = require("../model/userModel")
 const bcrypt = require("bcrypt")
 const jwt = require('jsonwebtoken')
 const mailer = require('./node_mailer')
-
+const mailer2 = require('./publisher')
 module.exports = class UserService {
     /**
      * @Description : registering a new user and saving details in database
@@ -78,12 +78,12 @@ module.exports = class UserService {
             User.findEmail(email)
                 .then(user => {
                     const mail = {
-                        email: user.dataValues.email
+                        email: email
                     }
                     console.log(mail)
                     const tokan = jwt.sign(mail, process.env.JWT_KEY, { expiresIn: 1440 })
                     console.log(tokan)
-                    mailer.mailer(email, tokan, flag)
+                    mailer2.mailer2(email, tokan)
                     resolve(tokan)
                 }).catch(err => {
                     reject(err)

@@ -1,3 +1,4 @@
+const { body } = require('express-validator');
 const logger = require('../dbConfig/logger');
 const lable = require('../service/labelService');
 
@@ -123,6 +124,32 @@ module.exports = class Lable {
                 })
                 .catch(err => {
                     response.message = 'updetion failed. ' + err;
+                    logger.error(response.message);
+                    res.status(400).send(response);
+                })
+        } catch (error) {
+            logger.error(response.message + error);
+            res.send(response);
+        }
+    }
+
+    addLabel(req, res) {
+        let response = {
+            'message': 'Something bad happend',
+            'success': false
+        };
+        try {
+            let labelId = req.body.id;
+            let noteId = req.body.noteId;
+            labelService.allLabel(labelId, noteId)
+                .then(() => {
+                    logger.info("congrats You Are Successsfully added the label");
+                    response.message = 'label successfully added';
+                    response.success = true;
+                    res.status(200).send(response);
+                })
+                .catch(err => {
+                    response.message = 'error while adding label ' + err;
                     logger.error(response.message);
                     res.status(400).send(response);
                 })

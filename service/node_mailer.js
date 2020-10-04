@@ -2,7 +2,6 @@ const nodemailer = require("nodemailer");
 require('dotenv').config()
 
 module.exports.mailer = (email, token, flag) => {
-    console.log('/////////////')
     console.log(flag)
     let transporter = nodemailer.createTransport({
         service: 'gmail',
@@ -30,6 +29,8 @@ module.exports.mailer = (email, token, flag) => {
             html: 'Please click on the following link for reset password   ' + link
         }
     }
+
+
 
 
     transporter.sendMail(mailOption, (error, info) => {
