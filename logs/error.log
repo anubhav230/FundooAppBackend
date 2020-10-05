@@ -314,3 +314,22 @@
 {"message":"All messages sent...","level":"error","timestamp":"2020-10-05T19:14:15.187Z"}
 {"message":"All messages sent...","level":"error","timestamp":"2020-10-05T19:17:17.028Z"}
 {"message":"All messages sent...","level":"error","timestamp":"2020-10-05T19:18:05.409Z"}
+{"message":"No result found, there is no such email registeredemail not found: TypeError: Cannot read property 'id' of null","level":"error","timestamp":"2020-10-05T20:13:05.051Z"}
+{"message":"No result found, there is no such email registeredemail not found: TypeError: Cannot read property 'id' of null","level":"error","timestamp":"2020-10-05T20:16:38.404Z"}
+{"message":"No result found, there is no such email registeredemail not found: TypeError: Cannot read property 'id' of null","level":"error","timestamp":"2020-10-05T20:17:43.663Z"}
+{"message":"No result found, there is no such email registeredemail not found: TypeError: Cannot read property 'id' of null","level":"error","timestamp":"2020-10-05T20:17:45.465Z"}
+{"message":"No result found, there is no such email registeredemail not found: TypeError: Cannot read property 'id' of null","level":"error","timestamp":"2020-10-05T20:17:47.885Z"}
+{"message":"No result found, there is no such email registeredemail not found: TypeError: Cannot read property 'id' of null","level":"error","timestamp":"2020-10-05T20:17:49.954Z"}
+{"message":"Something bad happendemail not found: TypeError: Cannot read property 'id' of null","level":"error","timestamp":"2020-10-05T20:18:37.655Z"}
+{"message":"Something bad happendemail not found: TypeError: Cannot read property 'dataValues' of null","level":"error","timestamp":"2020-10-05T20:25:56.309Z"}
+{"message":"Something bad happendemail not found: TypeError: Cannot read property 'id' of null","level":"error","timestamp":"2020-10-05T20:28:41.928Z"}
+{"message":"Something bad happendemail not found: TypeError: Cannot read property 'dataValues' of null","level":"error","timestamp":"2020-10-05T20:29:27.760Z"}
+{"message":"Something bad happendemail not found: TypeError: Cannot read property 'id' of null","level":"error","timestamp":"2020-10-05T20:29:35.580Z"}
+{"message":"Something bad happendemail not found: SequelizeDatabaseError: column user.login_key does not exist","level":"error","timestamp":"2020-10-05T20:35:38.178Z"}
+{"message":"Something bad happendemail not found: TypeError: Cannot read property 'dataValues' of null","level":"error","timestamp":"2020-10-05T20:35:54.239Z"}
+{"message":"Something bad happendemail not found: TypeError: Cannot read property 'id' of null","level":"error","timestamp":"2020-10-05T20:36:24.931Z"}
+{"message":"Something bad happendTypeError: collaborator.finduser is not a function","level":"error","timestamp":"2020-10-05T20:37:44.397Z"}
+{"message":"Something bad happendTypeError: Cannot read property 'then' of undefined","level":"error","timestamp":"2020-10-05T20:56:11.522Z"}
+{"message":"Something bad happendTypeError: Cannot read property 'then' of undefined","level":"error","timestamp":"2020-10-05T20:56:20.378Z"}
+{"message":"Something bad happendemail not found: TypeError: Cannot read property 'dataValues' of null","level":"error","timestamp":"2020-10-05T21:00:17.753Z"}
+{"message":"Something bad happendemail not found: ReferenceError: data is not defined","level":"error","timestamp":"2020-10-05T21:01:12.052Z"}

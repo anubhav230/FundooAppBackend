@@ -1,4 +1,6 @@
 {
+    "username": "guest",
+    "password": "guest",
     "amqp": "amqp://localhost",
     "queue": "nodemailer-amqp",
 

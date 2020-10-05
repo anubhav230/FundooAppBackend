@@ -4,10 +4,12 @@ const tokenVerify = require('../middleware/authentication').tokenVerify
 const { check } = require('express-validator');
 const checkCache = require('../middleware/checkCache')
 const lable = require('../controller/labelController')
+const collaborator = require('../controller/colabController')
 
 const controller = new user();
 const noteController = new note();
 const lableController = new lable();
+const collaboration = new collaborator();
 /**
  * @description Exporting routes
  * @param {function} app http requests 
@@ -34,4 +36,7 @@ module.exports = (app) => {
     app.delete('/delete-label', tokenVerify, lableController.deleteLabel);
     app.put('/update-label', tokenVerify, lableController.updateLabel);
     app.put('/add-label', tokenVerify, lableController.addLabel);
+
+    /****routs for collaborator****/
+    app.post('/search', collaboration.search)
 }

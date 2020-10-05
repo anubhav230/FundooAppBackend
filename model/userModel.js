@@ -98,18 +98,18 @@ module.exports.hashPassword = (password) => {
     return bcrypt.hashSync(password, 10)
 }
 
-module.exports.finduser = (login_key) => {
-    return new Promise((resolve, reject) => {
-        this.userModel.findOne({
-                where: {
-                    login_key: login_key
-                }
-            })
-            .then((data) => {
-                resolve(data.dataValues.id)
-            })
-            .catch((err) => {
-                reject(err)
-            })
-    })
-}
+// module.exports.finduser = (email) => {
+//     return new Promise((resolve, reject) => {
+//         this.userModel.findOne({
+//                 where: {
+//                     email: email
+//                 }
+//             })
+//             .then((data) => {
+//                 resolve(data.dataValues.id)
+//             })
+//             .catch((err) => {
+//                 reject(err)
+//             })
+//     })
+// }

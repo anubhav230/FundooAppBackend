@@ -519,3 +519,49 @@
 {"level":"info","message":"Delivered message %s","timestamp":"2020-10-05T19:17:19.869Z"}
 {"message":"All messages sent...","level":"error","timestamp":"2020-10-05T19:18:05.408Z"}
 {"level":"info","message":"Delivered message %s","timestamp":"2020-10-05T19:18:08.341Z"}
+{"message":"No result found, there is no such email registeredemail not found: TypeError: Cannot read property 'id' of null","level":"error","timestamp":"2020-10-05T20:13:05.051Z"}
+{"message":"No result found, there is no such email registeredemail not found: TypeError: Cannot read property 'id' of null","level":"error","timestamp":"2020-10-05T20:16:38.403Z"}
+{"message":"No result found, there is no such email registeredemail not found: TypeError: Cannot read property 'id' of null","level":"error","timestamp":"2020-10-05T20:17:43.662Z"}
+{"message":"No result found, there is no such email registeredemail not found: TypeError: Cannot read property 'id' of null","level":"error","timestamp":"2020-10-05T20:17:45.464Z"}
+{"message":"No result found, there is no such email registeredemail not found: TypeError: Cannot read property 'id' of null","level":"error","timestamp":"2020-10-05T20:17:47.885Z"}
+{"message":"No result found, there is no such email registeredemail not found: TypeError: Cannot read property 'id' of null","level":"error","timestamp":"2020-10-05T20:17:49.953Z"}
+{"message":"Something bad happendemail not found: TypeError: Cannot read property 'id' of null","level":"error","timestamp":"2020-10-05T20:18:37.652Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-05T20:20:07.911Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-05T20:20:39.562Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-05T20:21:05.725Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-05T20:21:09.859Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-05T20:21:10.279Z"}{"message":"Something bad happendemail not found: TypeError: Cannot read property 'dataValues' of null","level":"error","timestamp":"2020-10-05T20:25:56.307Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-05T20:26:58.383Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-05T20:27:23.799Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-05T20:27:51.487Z"}
+{"message":"Something bad happendemail not found: TypeError: Cannot read property 'id' of null","level":"error","timestamp":"2020-10-05T20:28:41.927Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-05T20:28:52.052Z"}
+{"message":"Something bad happendemail not found: TypeError: Cannot read property 'dataValues' of null","level":"error","timestamp":"2020-10-05T20:29:27.759Z"}
+{"message":"Something bad happendemail not found: TypeError: Cannot read property 'id' of null","level":"error","timestamp":"2020-10-05T20:29:35.578Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-05T20:29:41.788Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-05T20:29:57.095Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-05T20:30:27.906Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-05T20:31:18.950Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-05T20:32:16.669Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-05T20:33:55.354Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-05T20:34:24.933Z"}
+{"message":"Something bad happendemail not found: SequelizeDatabaseError: column user.login_key does not exist","level":"error","timestamp":"2020-10-05T20:35:38.177Z"}
+{"message":"Something bad happendemail not found: TypeError: Cannot read property 'dataValues' of null","level":"error","timestamp":"2020-10-05T20:35:54.237Z"}
+{"message":"Something bad happendemail not found: TypeError: Cannot read property 'id' of null","level":"error","timestamp":"2020-10-05T20:36:24.930Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-05T20:36:29.570Z"}
+{"message":"Something bad happendTypeError: collaborator.finduser is not a function","level":"error","timestamp":"2020-10-05T20:37:44.396Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-05T20:37:54.409Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-05T20:55:53.182Z"}
+{"message":"Something bad happendTypeError: Cannot read property 'then' of undefined","level":"error","timestamp":"2020-10-05T20:56:11.521Z"}
+{"message":"Something bad happendTypeError: Cannot read property 'then' of undefined","level":"error","timestamp":"2020-10-05T20:56:20.377Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-05T20:56:28.976Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-05T20:56:43.678Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-05T20:57:09.165Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-05T20:57:32.813Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-05T20:58:01.235Z"}
+{"message":"Something bad happendemail not found: TypeError: Cannot read property 'dataValues' of null","level":"error","timestamp":"2020-10-05T21:00:17.752Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-05T21:00:43.895Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-05T21:01:03.536Z"}
+{"message":"Something bad happendemail not found: ReferenceError: data is not defined","level":"error","timestamp":"2020-10-05T21:01:12.051Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-05T21:01:22.228Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-05T21:02:11.656Z"}
