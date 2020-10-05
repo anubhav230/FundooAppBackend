@@ -509,3 +509,13 @@
 {"message":"congrats You Are Successsfully updated the label","level":"info","timestamp":"2020-10-02T22:16:52.764Z"}
 {"message":"login token has verified","level":"info","timestamp":"2020-10-03T00:34:20.315Z"}
 {"message":"congrats You Are Successsfully added the label","level":"info","timestamp":"2020-10-03T00:34:20.376Z"}
+{"message":"login token has verified","level":"info","timestamp":"2020-10-05T07:02:45.662Z"}
+{"message":"congrats You Are Successsfully read all note......","level":"info","timestamp":"2020-10-05T07:02:46.165Z"}
+{"message":"All messages sent...","level":"error","timestamp":"2020-10-05T19:00:47.761Z"}
+{"level":"info","message":"Delivered message %s","timestamp":"2020-10-05T19:00:51.016Z"}
+{"message":"All messages sent...","level":"error","timestamp":"2020-10-05T19:14:15.187Z"}
+{"level":"info","message":"Delivered message %s","timestamp":"2020-10-05T19:14:18.236Z"}
+{"message":"All messages sent...","level":"error","timestamp":"2020-10-05T19:17:17.027Z"}
+{"level":"info","message":"Delivered message %s","timestamp":"2020-10-05T19:17:19.869Z"}
+{"message":"All messages sent...","level":"error","timestamp":"2020-10-05T19:18:05.408Z"}
+{"level":"info","message":"Delivered message %s","timestamp":"2020-10-05T19:18:08.341Z"}

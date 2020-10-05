@@ -310,3 +310,7 @@
 {"message":"deletion failed. Some issue in deleting the labelerror: TypeError: Cannot read property 'findOne' of undefined","level":"error","timestamp":"2020-10-02T06:15:17.744Z"}
 {"message":"deletion failed. Some issue in deleting the labelerror: Sorry no such label found: ","level":"error","timestamp":"2020-10-02T06:15:32.058Z"}
 {"message":"updetion failed. ReferenceError: note is not defined","level":"error","timestamp":"2020-10-02T22:14:35.856Z"}
+{"message":"All messages sent...","level":"error","timestamp":"2020-10-05T19:00:47.762Z"}
+{"message":"All messages sent...","level":"error","timestamp":"2020-10-05T19:14:15.187Z"}
+{"message":"All messages sent...","level":"error","timestamp":"2020-10-05T19:17:17.028Z"}
+{"message":"All messages sent...","level":"error","timestamp":"2020-10-05T19:18:05.409Z"}

@@ -1,11 +1,13 @@
 const amqplib = require('amqplib/callback_api');
 const nodemailer = require('nodemailer');
-const config = require('../rabbitMq.json')
+const config = require('./rabbitMq.json')
+const logger = require('./dbConfig/logger')
+require('dotenv').config()
 
 // Setup Nodemailer transport
 const transport = nodemailer.createTransport({
-    host: 'smtp.mailtrap.io',
-    port: 2525,
+    host: process.env.MAILER_HOST,
+    port: process.env.MAILER_PORT,
 
     // we intentionally do not set any authentication
     // options here as we are going to use message specific
@@ -16,18 +18,20 @@ const transport = nodemailer.createTransport({
     disableUrlAccess: true
 }, {
     // Default options for the message. Used if specific values are not set
-    from: '7dc1e9bca4f016'
+    from: process.env.MAIL_ID
 });
 
 // Create connection to AMQP server
 amqplib.connect(config.amqp, (err, connection) => {
     if (err) {
+        logger.error('error while connecting')
         console.error(err.stack);
         return process.exit(1);
     }
     // Create channel
     connection.createChannel((err, channel) => {
         if (err) {
+            logger.error('error while creating channel')
             console.error(err.stack);
             return process.exit(1);
         }
@@ -55,8 +59,8 @@ amqplib.connect(config.amqp, (err, connection) => {
                 let message = JSON.parse(data.content.toString());
                 message.auth = {
 
-                    user: '7dc1e9bca4f016',
-                    pass: 'ae32e14d143892',
+                    user: process.env.MAIL_ID,
+                    pass: process.env.MAIL_PASS,
                     to: process.env.MAIL,
                 };
 
@@ -67,6 +71,7 @@ amqplib.connect(config.amqp, (err, connection) => {
                         // put the failed message item back to queue
                         return channel.nack(data);
                     }
+                    logger.info('Delivered message %s', info.messageId);
                     console.log('Delivered message %s', info.messageId);
                     // remove message item from the queue
                     channel.ack(data);

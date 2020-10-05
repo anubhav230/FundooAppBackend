@@ -1,5 +1,6 @@
 const amqplib = require('amqplib/callback_api');
 const config = require('../rabbitMq.json');
+const logger = require('../dbConfig/logger')
 
 // Create connection to AMQP server
 module.exports.mailer2 = (email, token) => {
@@ -12,6 +13,7 @@ module.exports.mailer2 = (email, token) => {
         // Create channel
         connection.createChannel((err, channel) => {
             if (err) {
+                logger.error('error in creating channel')
                 console.error(err.stack);
                 return process.exit(1);
             }
@@ -44,7 +46,8 @@ module.exports.mailer2 = (email, token) => {
                 let sent = 0;
                 let sendNext = () => {
                     if (sent >= 1) {
-                        console.log('All messages sent!');
+                        logger.error('All messages sent...')
+                        console.log('All messages sent...');
                         // Close connection to AMQP server
                         // We need to call channel.close first, otherwise pending
                         // messages are not written to the queue
