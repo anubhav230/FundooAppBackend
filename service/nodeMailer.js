@@ -30,9 +30,6 @@ module.exports.mailer = (email, token, flag) => {
         }
     }
 
-
-
-
     transporter.sendMail(mailOption, (error, info) => {
         if (error) {
             return console.log(error)

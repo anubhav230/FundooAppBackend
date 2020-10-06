@@ -19,14 +19,14 @@ module.exports.findUser = (email) => {
     })
 }
 
-module.exports.createCollaborator = (userid, noteid) => {
+module.exports.createCollaborator = (userId, noteId) => {
     console.log('///////////////////////from colab model')
-    console.log(userid)
-    console.log(noteid)
+    console.log(userId)
+    console.log(noteId)
     return new Promise((resolve, reject) => {
-        noteModel.noteModel.update({ colabUser: userid }, { where: { id: noteid } }) //create method of sequelize package
-            .then(() => {
-                resolve("success......fl")
+        noteModel.noteModel.update({ colabUser: userId }, { where: { id: noteId } }) //create method of sequelize package
+            .then(data => {
+                resolve(data)
             })
             .catch(err => {
                 reject("Error in create collaborator", err)

@@ -2,14 +2,13 @@ const amqplib = require('amqplib/callback_api');
 const config = require('../rabbitMq.json');
 const logger = require('../dbConfig/logger')
 
-// Create connection to AMQP server
 module.exports.mailer2 = (email, token) => {
+    // Create connection to AMQP server
     amqplib.connect(config.amqp, (err, connection) => {
         if (err) {
             console.error(err.stack);
             return process.exit(1);
         }
-
         // Create channel
         connection.createChannel((err, channel) => {
             if (err) {
@@ -17,7 +16,6 @@ module.exports.mailer2 = (email, token) => {
                 console.error(err.stack);
                 return process.exit(1);
             }
-
             // Ensure queue for messages
             channel.assertQueue(config.queue, {
                 // Ensure that the queue is not deleted when server restarts
@@ -61,9 +59,7 @@ module.exports.mailer2 = (email, token) => {
                         html: 'Please click on the following link for email verification  ' + link
                     }, sendNext);
                 };
-
                 sendNext();
-
             });
         });
     });

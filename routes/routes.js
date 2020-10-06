@@ -39,5 +39,5 @@ module.exports = (app) => {
 
     /****routs for collaborator****/
     app.post('/search', collaboration.search);
-    app.post('/createCollaborator', collaboration.createCollaborator)
+    app.post('/create-collaborator', collaboration.createCollaborator)
 }

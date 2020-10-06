@@ -20,6 +20,14 @@ module.exports.userModel = db.sequelize.define('user', {
         type: sequelize.STRING,
         allowNull: false
     },
+    createdAt: {
+        type: sequelize.DATE,
+        defaultValue: sequelize.NOW
+    },
+    updatedAt: {
+        type: sequelize.DATE,
+        defaultValue: sequelize.NOW
+    },
     isVerified: {
         type: sequelize.BOOLEAN
     }
@@ -46,22 +54,14 @@ module.exports.createUser = (userData) => {
  * @param {email} email 
  */
 module.exports.findEmail = (email) => {
-        return this.userModel.findOne({ //findOne method of sequelize package
-            where: {
-                email: email
-            }
-        }).then(res => {
-            return res;
-        });
-    }
-    /**
-     * @Description : for updating JWT tokan in database whenever user trying to login 
-     * @param {logintoken} logintoken 
-     * @param {email} email 
-     */
-    // module.exports.login = (login_key, email) => { //
-    //     return this.userModel.update({ login_key: login_key }, { where: { email: email } })
-    // }
+    return this.userModel.findOne({ //findOne method of sequelize package
+        where: {
+            email: email
+        }
+    }).then(res => {
+        return res;
+    });
+}
 
 /**
  * @Description : for updating JWT tokan in database whenever user trying to verify email 
