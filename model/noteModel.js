@@ -38,6 +38,10 @@ module.exports.noteModel = db.sequelize.define('notes', {
     labelId: {
         type: sequelize.INTEGER,
         defaultValue: null
+    },
+    colabUser: {
+        type: sequelize.INTEGER,
+        defaultValue: null
     }
 });
 

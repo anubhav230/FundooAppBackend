@@ -33,4 +33,30 @@ module.exports = class CollabController {
             res.send(response);
         }
     }
+
+    createCollaborator(req, res) {
+        let response = {
+            'message': 'Something bad happend',
+            'success': false
+        };
+        try {
+            const userId = req.body.userId
+            const noteId = req.body.nodeId
+            colabService.createCollaborator(userId, noteId)
+                .then(() => {
+                    logger.info("congrats You Are Successsfully set Collaborator");
+                    response.message = 'collaborator set';
+                    response.success = true;
+                    res.status(200).send(response);
+                })
+                .catch(err => {
+                    response.message = 'Some issu is colaboration';
+                    logger.error(response.message + err)
+                    res.status(400).send(response)
+                })
+        } catch (error) {
+            logger.error(response.message + error);
+            res.send(response);
+        }
+    }
 }

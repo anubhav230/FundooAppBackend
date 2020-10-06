@@ -38,5 +38,6 @@ module.exports = (app) => {
     app.put('/add-label', tokenVerify, lableController.addLabel);
 
     /****routs for collaborator****/
-    app.post('/search', collaboration.search)
+    app.post('/search', collaboration.search);
+    app.post('/createCollaborator', collaboration.createCollaborator)
 }

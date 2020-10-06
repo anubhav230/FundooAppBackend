@@ -1,7 +1,7 @@
 const User = require("../model/userModel")
 const bcrypt = require("bcrypt")
 const jwt = require('jsonwebtoken')
-const mailer = require('./node_mailer')
+const mailer = require('./nodeMailer')
 const mailer2 = require('./publisher')
 module.exports = class UserService {
     /**

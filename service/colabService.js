@@ -13,4 +13,8 @@ module.exports = class ColabService {
                 })
         })
     }
+
+    createCollaborator(userid, noteid) {
+        return collaborator.createCollaborator(userid, noteid)
+    }
 }
