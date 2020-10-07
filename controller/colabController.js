@@ -2,8 +2,14 @@ const collabService = require('../service/colabService')
 const logger = require('../dbConfig/logger')
 
 const colabService = new collabService();
+
 module.exports = class CollabController {
 
+    /**
+     * @description function for searching user
+     * @param {req} req 
+     * @param {res} res 
+     */
     search(req, res) {
         let response = {
             'message': 'Something bad happend',
@@ -32,6 +38,11 @@ module.exports = class CollabController {
         }
     }
 
+    /**
+     * @description function for adding collabotators
+     * @param {req} req 
+     * @param {res} res 
+     */
     createCollaborator(req, res) {
         let response = {
             'message': 'Something bad happend',

@@ -1,4 +1,3 @@
-//const sequelize = require("sequelize");
 const noteModel = require('./noteModel');
 const userModel = require('./userModel');
 
@@ -26,6 +25,10 @@ module.exports.colabModel = db.sequelize.define('collaborators', {
     }
 });
 
+/**
+ * @description creating new collaborator
+ * @param {data} data 
+ */
 module.exports.createCollaborator = (data) => {
     return new Promise((resolve, reject) => {
         this.colabModel.create(data)
@@ -38,6 +41,10 @@ module.exports.createCollaborator = (data) => {
     });
 }
 
+/**
+ * @description finding iser in user table
+ * @param {email} email 
+ */
 module.exports.findUser = (email) => {
     console.log('//////findUser')
     return new Promise((resolve, reject) => {
