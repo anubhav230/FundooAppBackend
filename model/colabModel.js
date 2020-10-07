@@ -26,7 +26,6 @@ module.exports.colabModel = db.sequelize.define('collaborators', {
     }
 });
 
-
 module.exports.createCollaborator = (data) => {
     return new Promise((resolve, reject) => {
         this.colabModel.create(data)
