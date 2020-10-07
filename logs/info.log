@@ -584,3 +584,116 @@
 {"message":"congrats You Are Successsfully set Collaborator","level":"info","timestamp":"2020-10-06T04:21:27.447Z"}
 {"message":"congrats You Are Successsfully set Collaborator","level":"info","timestamp":"2020-10-06T04:22:07.374Z"}
 {"message":"congrats You Are Successsfully set Collaborator","level":"info","timestamp":"2020-10-06T04:22:12.003Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-06T04:51:34.430Z"}
+{"message":"login token has verified","level":"info","timestamp":"2020-10-06T05:02:45.548Z"}
+{"message":"error while removing label error: Error: WHERE parameter \"id\" has invalid \"undefined\" value","level":"error","timestamp":"2020-10-06T05:02:45.565Z"}
+{"message":"login token has verified","level":"info","timestamp":"2020-10-06T05:04:57.109Z"}
+{"message":"error while removing label error: Error: WHERE parameter \"id\" has invalid \"undefined\" value","level":"error","timestamp":"2020-10-06T05:04:57.135Z"}
+{"message":"login token has verified","level":"info","timestamp":"2020-10-06T05:05:03.135Z"}
+{"message":"error while removing label error: Error: WHERE parameter \"id\" has invalid \"undefined\" value","level":"error","timestamp":"2020-10-06T05:05:03.140Z"}
+{"message":"login token has verified","level":"info","timestamp":"2020-10-06T05:05:24.820Z"}
+{"message":"error while removing label error: Error: WHERE parameter \"id\" has invalid \"undefined\" value","level":"error","timestamp":"2020-10-06T05:05:24.841Z"}
+{"message":"login token has verified","level":"info","timestamp":"2020-10-06T05:05:35.428Z"}
+{"message":"congrats You Are Successsfully removed the label","level":"info","timestamp":"2020-10-06T05:05:35.492Z"}
+{"message":"login token has verified","level":"info","timestamp":"2020-10-06T05:09:18.805Z"}
+{"message":"congrats You Are Successsfully added the label","level":"info","timestamp":"2020-10-06T05:09:18.811Z"}
+{"message":"login token has verified","level":"info","timestamp":"2020-10-06T05:09:49.954Z"}
+{"message":"congrats You Are Successsfully added the label","level":"info","timestamp":"2020-10-06T05:09:49.962Z"}
+{"message":"login token has verified","level":"info","timestamp":"2020-10-06T05:11:32.325Z"}
+{"message":"congrats You Are Successsfully added the label","level":"info","timestamp":"2020-10-06T05:11:32.348Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-06T05:19:14.936Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-06T05:20:21.923Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-06T05:20:41.352Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-06T05:21:13.417Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-06T05:21:19.643Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-06T05:21:28.213Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-06T05:23:50.373Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-06T05:25:16.646Z"}
+{"message":"Something bad happendemail not found: TypeError: Cannot read property 'dataValue' of null","level":"error","timestamp":"2020-10-06T05:25:37.086Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-06T05:25:47.254Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-06T05:26:07.097Z"}
+{"message":"login token has verified","level":"info","timestamp":"2020-10-06T05:37:00.090Z"}
+{"message":"updetion failed. Error: WHERE parameter \"id\" has invalid \"undefined\" value","level":"error","timestamp":"2020-10-06T05:37:00.207Z"}
+{"message":"login token has verified","level":"info","timestamp":"2020-10-06T05:37:14.264Z"}
+{"message":"congrats You Are Successsfully updated the note","level":"info","timestamp":"2020-10-06T05:37:14.529Z"}
+{"message":"login token has verified","level":"info","timestamp":"2020-10-06T05:44:37.756Z"}
+{"message":"updetion failed. Error: WHERE parameter \"id\" has invalid \"undefined\" value","level":"error","timestamp":"2020-10-06T05:44:37.762Z"}
+{"message":"All messages sent...","level":"error","timestamp":"2020-10-06T05:48:59.444Z"}
+{"level":"info","message":"Delivered message %s","timestamp":"2020-10-06T05:49:03.618Z"}
+{"message":"All messages sent...","level":"error","timestamp":"2020-10-06T05:55:15.010Z"}
+{"level":"info","message":"Delivered message %s","timestamp":"2020-10-06T05:55:18.059Z"}
+{"level":"info","message":"Delivered message %s","timestamp":"2020-10-06T05:55:20.874Z"}
+{"level":"info","message":"Delivered message %s","timestamp":"2020-10-06T05:55:23.893Z"}
+{"level":"info","message":"Delivered message %s","timestamp":"2020-10-06T05:55:26.933Z"}
+{"level":"info","message":"Delivered message %s","timestamp":"2020-10-06T05:55:29.832Z"}
+{"level":"info","message":"Delivered message %s","timestamp":"2020-10-06T05:55:32.898Z"}
+{"level":"info","message":"Delivered message %s","timestamp":"2020-10-06T05:55:35.875Z"}
+{"level":"info","message":"Delivered message %s","timestamp":"2020-10-06T05:55:38.734Z"}
+{"level":"info","message":"Delivered message %s","timestamp":"2020-10-06T05:55:41.700Z"}
+{"level":"info","message":"Delivered message %s","timestamp":"2020-10-06T05:55:44.841Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-07T01:28:42.388Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-07T01:30:19.428Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-07T01:30:33.941Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-07T01:31:12.270Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-07T01:31:19.227Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-07T01:31:36.843Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-07T01:31:55.252Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-07T01:32:28.469Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-07T01:32:50.672Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-07T01:33:07.523Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-07T01:33:13.414Z"}
+{"message":"Something bad happendenter correct email","level":"error","timestamp":"2020-10-07T01:34:03.145Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-07T01:34:23.207Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-07T01:34:32.617Z"}
+{"message":"Something bad happendenter correct email","level":"error","timestamp":"2020-10-07T01:34:37.090Z"}
+{"message":"Something bad happend enter correct email","level":"error","timestamp":"2020-10-07T01:35:13.040Z"}
+{"message":"Something bad happend enter correct email","level":"error","timestamp":"2020-10-07T01:35:52.652Z"}
+{"message":"Something bad happend enter correct email","level":"error","timestamp":"2020-10-07T01:36:10.718Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-07T01:36:15.173Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-07T01:36:45.183Z"}
+{"message":"Something bad happend enter correct email","level":"error","timestamp":"2020-10-07T03:03:01.064Z"}
+{"message":"Something bad happend enter correct email","level":"error","timestamp":"2020-10-07T03:03:36.574Z"}
+{"message":"Something bad happend enter correct email","level":"error","timestamp":"2020-10-07T03:03:54.173Z"}
+{"message":"Something bad happend enter correct email","level":"error","timestamp":"2020-10-07T03:04:09.377Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-07T03:04:19.846Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-07T03:04:28.020Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-07T03:04:47.231Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-07T03:05:01.149Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-07T03:05:14.730Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-07T03:05:22.805Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-07T03:05:55.893Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-07T03:06:07.640Z"}
+{"message":"Search Result Found","level":"info","timestamp":"2020-10-07T03:06:27.254Z"}
+{"message":"Some issu is colaborationReferenceError: email is not defined","level":"error","timestamp":"2020-10-07T03:07:48.676Z"}
+{"message":"Some issu is colaborationemail not found: Error in create collaborator","level":"error","timestamp":"2020-10-07T03:08:50.638Z"}
+{"message":"Some issu is colaborationemail not found: Error in create collaborator","level":"error","timestamp":"2020-10-07T03:09:11.333Z"}
+{"message":"Some issu is colaborationemail not found: Error in create collaborator","level":"error","timestamp":"2020-10-07T03:09:30.970Z"}
+{"message":"Some issu is colaborationemail not found: Error in create collaborator","level":"error","timestamp":"2020-10-07T03:09:52.580Z"}
+{"message":"Some issu is colaborationemail not found: Error in create collaborator","level":"error","timestamp":"2020-10-07T03:10:25.832Z"}
+{"message":"Some issu is colaborationemail not found: Error in create collaborator","level":"error","timestamp":"2020-10-07T03:10:46.284Z"}
+{"message":"Some issu is colaborationemail not found: Error in create collaborator","level":"error","timestamp":"2020-10-07T03:10:59.079Z"}
+{"message":"Some issu is colaborationemail not found: Error in create collaborator","level":"error","timestamp":"2020-10-07T03:11:12.066Z"}
+{"message":"Some issu is colaborationemail not found: Error in create collaborator","level":"error","timestamp":"2020-10-07T03:11:21.472Z"}
+{"message":"Some issu is colaborationemail not found: Error in create collaborator","level":"error","timestamp":"2020-10-07T03:11:29.620Z"}
+{"message":"Some issu is colaborationemail not found: Error in create collaborator","level":"error","timestamp":"2020-10-07T03:12:01.748Z"}
+{"message":"Some issu is colaborationemail not found: Error in create collaborator","level":"error","timestamp":"2020-10-07T03:12:04.477Z"}
+{"message":"Some issu is colaborationemail not found: Error in create collaborator","level":"error","timestamp":"2020-10-07T03:12:10.856Z"}
+{"message":"Some issu is colaborationemail not found: Error in create collaborator","level":"error","timestamp":"2020-10-07T03:12:35.444Z"}
+{"message":"Some issu is colaborationemail not found: Error in create collaborator","level":"error","timestamp":"2020-10-07T03:12:50.961Z"}
+{"message":"Some issu is colaborationemail not found: Error in create collaborator","level":"error","timestamp":"2020-10-07T03:13:58.365Z"}
+{"message":"Something bad happendReferenceError: mail is not defined","level":"error","timestamp":"2020-10-07T03:14:13.266Z"}
+{"message":"Some issu is colaborationemail not found: Error in create collaborator","level":"error","timestamp":"2020-10-07T03:14:30.887Z"}
+{"message":"congrats You Are Successsfully set Collaborator","level":"info","timestamp":"2020-10-07T03:14:46.959Z"}
+{"message":"Some issu is colaboration: email not found: TypeError: Cannot read property 'id' of null","level":"error","timestamp":"2020-10-07T03:16:19.386Z"}
+{"message":"Some issu is colaboration: email not found: TypeError: Cannot read property 'id' of nullemail not found: TypeError: Cannot read property 'id' of null","level":"error","timestamp":"2020-10-07T03:16:37.085Z"}
+{"message":"Some issu is colaboration: email not found: SequelizeDatabaseError: column user.email does not existemail not found: SequelizeDatabaseError: column user.email does not exist","level":"error","timestamp":"2020-10-07T04:24:17.641Z"}
+{"message":"Some issu is colaboration: email not found: SequelizeDatabaseError: column user.email does not existemail not found: SequelizeDatabaseError: column user.email does not exist","level":"error","timestamp":"2020-10-07T04:24:55.672Z"}
+{"message":"Some issu is colaboration: email not found: SequelizeDatabaseError: column user.email does not existemail not found: SequelizeDatabaseError: column user.email does not exist","level":"error","timestamp":"2020-10-07T04:26:27.027Z"}
+{"message":"Some issu is colaboration: email not found: SequelizeDatabaseError: column user.email does not existemail not found: SequelizeDatabaseError: column user.email does not exist","level":"error","timestamp":"2020-10-07T04:27:18.941Z"}
+{"message":"Some issu is colaboration: email not found: SequelizeDatabaseError: column user.email does not existemail not found: SequelizeDatabaseError: column user.email does not exist","level":"error","timestamp":"2020-10-07T04:27:58.686Z"}
+{"message":"Some issu is colaboration: email not found: SequelizeDatabaseError: column user.email does not existemail not found: SequelizeDatabaseError: column user.email does not exist","level":"error","timestamp":"2020-10-07T04:28:22.825Z"}
+{"message":"Some issu is colaboration: email not found: SequelizeDatabaseError: column \"createdAt\" of relation \"collaborators\" does not existemail not found: SequelizeDatabaseError: column \"createdAt\" of relation \"collaborators\" does not exist","level":"error","timestamp":"2020-10-07T04:28:35.255Z"}
+{"message":"Some issu is colaboration: email not found: SequelizeDatabaseError: column \"updatedAt\" of relation \"collaborators\" does not existemail not found: SequelizeDatabaseError: column \"updatedAt\" of relation \"collaborators\" does not exist","level":"error","timestamp":"2020-10-07T04:29:30.298Z"}
+{"message":"Some issu is colaboration: email not found: SequelizeDatabaseError: null value in column \"id\" violates not-null constraintemail not found: SequelizeDatabaseError: null value in column \"id\" violates not-null constraint","level":"error","timestamp":"2020-10-07T04:29:51.715Z"}
+{"message":"congrats You Are Successsfully set Collaborator","level":"info","timestamp":"2020-10-07T04:30:19.454Z"}
+{"message":"congrats You Are Successsfully set Collaborator","level":"info","timestamp":"2020-10-07T04:31:32.845Z"}

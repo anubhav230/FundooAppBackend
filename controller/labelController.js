@@ -139,7 +139,7 @@ module.exports = class Lable {
             'success': false
         };
         try {
-            let labelId = req.body.id;
+            let labelId = req.body.labelId;
             let noteId = req.body.noteId;
             labelService.allLabel(labelId, noteId)
                 .then(() => {
@@ -150,6 +150,32 @@ module.exports = class Lable {
                 })
                 .catch(err => {
                     response.message = 'error while adding label ' + err;
+                    logger.error(response.message);
+                    res.status(400).send(response);
+                })
+        } catch (error) {
+            logger.error(response.message + error);
+            res.send(response);
+        }
+    }
+
+    removeLabel(req, res) {
+        let response = {
+            'message': 'Something bad happend',
+            'success': false
+        };
+        try {
+            let noteId = req.body.noteId;
+            console.log(noteId)
+            labelService.removeLabel(noteId)
+                .then(() => {
+                    logger.info("congrats You Are Successsfully removed the label");
+                    response.message = 'label successfully removed';
+                    response.success = true;
+                    res.status(200).send(response);
+                })
+                .catch(err => {
+                    response.message = 'error while removing label ' + err;
                     logger.error(response.message);
                     res.status(400).send(response);
                 })

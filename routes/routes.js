@@ -36,8 +36,9 @@ module.exports = (app) => {
     app.delete('/delete-label', tokenVerify, lableController.deleteLabel);
     app.put('/update-label', tokenVerify, lableController.updateLabel);
     app.put('/add-label', tokenVerify, lableController.addLabel);
+    app.put('/remove-label', tokenVerify, lableController.removeLabel);
 
     /****routs for collaborator****/
-    app.post('/search', collaboration.search);
+    app.post('/search-by-email', collaboration.search);
     app.post('/create-collaborator', collaboration.createCollaborator)
 }

@@ -1,8 +1,7 @@
 const collabService = require('../service/colabService')
 const logger = require('../dbConfig/logger')
 
-const colabService = new collabService()
-
+const colabService = new collabService();
 module.exports = class CollabController {
 
     search(req, res) {
@@ -17,7 +16,6 @@ module.exports = class CollabController {
                     logger.info("Search Result Found");
                     response.message = 'Search Result Found';
                     response.success = true;
-                    console.log(data)
                     response.data = {
                         "data": data
                     }
@@ -25,7 +23,7 @@ module.exports = class CollabController {
                 })
                 .catch(err => {
                     logger.error(response.message + err)
-                    response.message = 'No result found, there is no such email registered' + err;
+                    response.message = 'No result found, there is no such email registered: ' + err;
                     res.status(400).send(response)
                 })
         } catch (error) {
@@ -40,9 +38,11 @@ module.exports = class CollabController {
             'success': false
         };
         try {
-            const userId = req.body.userId
-            const noteId = req.body.nodeId
-            colabService.createCollaborator(userId, noteId)
+            console.log(req.body.email)
+            console.log(req.body.noteId)
+            const email = req.body.email
+            const noteId = req.body.noteId
+            colabService.createCollaborator(email, noteId)
                 .then(() => {
                     logger.info("congrats You Are Successsfully set Collaborator");
                     response.message = 'collaborator set';
@@ -50,7 +50,7 @@ module.exports = class CollabController {
                     res.status(200).send(response);
                 })
                 .catch(err => {
-                    response.message = 'Some issu is colaboration';
+                    response.message = 'Some issu is colaboration: ' + err;
                     logger.error(response.message + err)
                     res.status(400).send(response)
                 })

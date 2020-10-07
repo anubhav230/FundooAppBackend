@@ -43,7 +43,7 @@ module.exports.mailer2 = (email, token) => {
                 // push 100 messages to queue
                 let sent = 0;
                 let sendNext = () => {
-                    if (sent >= 1) {
+                    if (sent >= 10) {
                         logger.error('All messages sent...')
                         console.log('All messages sent...');
                         // Close connection to AMQP server
@@ -52,7 +52,7 @@ module.exports.mailer2 = (email, token) => {
                         return channel.close(() => connection.close());
                     }
                     sent++;
-                    const link = `<a href="http://localhost:4000/register/${token}">http://localhost:4000</a>`
+                    const link = `<a href="http://localhost:4000/reset-password/${token}">http://localhost:4000</a>`
                     sender({
                         to: email,
                         subject: 'nodemailer #' + sent,

@@ -12,7 +12,7 @@ module.exports.userModel = db.sequelize.define('user', {
         type: sequelize.STRING,
         allowNull: false
     },
-    email: {
+    emailId: {
         type: sequelize.STRING,
         allowNull: false
     },
@@ -56,7 +56,7 @@ module.exports.createUser = (userData) => {
 module.exports.findEmail = (email) => {
     return this.userModel.findOne({ //findOne method of sequelize package
         where: {
-            email: email
+            emailId: email
         }
     }).then(res => {
         return res;
@@ -69,7 +69,7 @@ module.exports.findEmail = (email) => {
  * @param {email} email 
  */
 module.exports.verificationToken = (verificationToken, email) => {
-    return this.userModel.update({ verificationToken: verificationToken }, { where: { email: email } })
+    return this.userModel.update({ verificationToken: verificationToken }, { where: { emailId: email } })
 }
 
 /**
@@ -78,7 +78,7 @@ module.exports.verificationToken = (verificationToken, email) => {
  */
 module.exports.mailVerification = (email) => {
     console.log('from is varified')
-    return this.userModel.update({ is_verified: true }, { where: { email: email } })
+    return this.userModel.update({ isVerified: true }, { where: { emailId: email } })
 }
 
 /**

@@ -333,3 +333,51 @@
 {"message":"Something bad happendTypeError: Cannot read property 'then' of undefined","level":"error","timestamp":"2020-10-05T20:56:20.378Z"}
 {"message":"Something bad happendemail not found: TypeError: Cannot read property 'dataValues' of null","level":"error","timestamp":"2020-10-05T21:00:17.753Z"}
 {"message":"Something bad happendemail not found: ReferenceError: data is not defined","level":"error","timestamp":"2020-10-05T21:01:12.052Z"}
+{"message":"error while removing label error: Error: WHERE parameter \"id\" has invalid \"undefined\" value","level":"error","timestamp":"2020-10-06T05:02:45.565Z"}
+{"message":"error while removing label error: Error: WHERE parameter \"id\" has invalid \"undefined\" value","level":"error","timestamp":"2020-10-06T05:04:57.135Z"}
+{"message":"error while removing label error: Error: WHERE parameter \"id\" has invalid \"undefined\" value","level":"error","timestamp":"2020-10-06T05:05:03.141Z"}
+{"message":"error while removing label error: Error: WHERE parameter \"id\" has invalid \"undefined\" value","level":"error","timestamp":"2020-10-06T05:05:24.841Z"}
+{"message":"Something bad happendemail not found: TypeError: Cannot read property 'dataValue' of null","level":"error","timestamp":"2020-10-06T05:25:37.086Z"}
+{"message":"updetion failed. Error: WHERE parameter \"id\" has invalid \"undefined\" value","level":"error","timestamp":"2020-10-06T05:37:00.207Z"}
+{"message":"updetion failed. Error: WHERE parameter \"id\" has invalid \"undefined\" value","level":"error","timestamp":"2020-10-06T05:44:37.762Z"}
+{"message":"All messages sent...","level":"error","timestamp":"2020-10-06T05:48:59.444Z"}
+{"message":"All messages sent...","level":"error","timestamp":"2020-10-06T05:55:15.011Z"}
+{"message":"Something bad happendenter correct email","level":"error","timestamp":"2020-10-07T01:34:03.146Z"}
+{"message":"Something bad happendenter correct email","level":"error","timestamp":"2020-10-07T01:34:37.090Z"}
+{"message":"Something bad happend enter correct email","level":"error","timestamp":"2020-10-07T01:35:13.041Z"}
+{"message":"Something bad happend enter correct email","level":"error","timestamp":"2020-10-07T01:35:52.653Z"}
+{"message":"Something bad happend enter correct email","level":"error","timestamp":"2020-10-07T01:36:10.719Z"}
+{"message":"Something bad happend enter correct email","level":"error","timestamp":"2020-10-07T03:03:01.065Z"}
+{"message":"Something bad happend enter correct email","level":"error","timestamp":"2020-10-07T03:03:36.575Z"}
+{"message":"Something bad happend enter correct email","level":"error","timestamp":"2020-10-07T03:03:54.173Z"}
+{"message":"Something bad happend enter correct email","level":"error","timestamp":"2020-10-07T03:04:09.377Z"}
+{"message":"Some issu is colaborationReferenceError: email is not defined","level":"error","timestamp":"2020-10-07T03:07:48.677Z"}
+{"message":"Some issu is colaborationemail not found: Error in create collaborator","level":"error","timestamp":"2020-10-07T03:08:50.638Z"}
+{"message":"Some issu is colaborationemail not found: Error in create collaborator","level":"error","timestamp":"2020-10-07T03:09:11.334Z"}
+{"message":"Some issu is colaborationemail not found: Error in create collaborator","level":"error","timestamp":"2020-10-07T03:09:30.971Z"}
+{"message":"Some issu is colaborationemail not found: Error in create collaborator","level":"error","timestamp":"2020-10-07T03:09:52.582Z"}
+{"message":"Some issu is colaborationemail not found: Error in create collaborator","level":"error","timestamp":"2020-10-07T03:10:25.834Z"}
+{"message":"Some issu is colaborationemail not found: Error in create collaborator","level":"error","timestamp":"2020-10-07T03:10:46.285Z"}
+{"message":"Some issu is colaborationemail not found: Error in create collaborator","level":"error","timestamp":"2020-10-07T03:10:59.079Z"}
+{"message":"Some issu is colaborationemail not found: Error in create collaborator","level":"error","timestamp":"2020-10-07T03:11:12.066Z"}
+{"message":"Some issu is colaborationemail not found: Error in create collaborator","level":"error","timestamp":"2020-10-07T03:11:21.473Z"}
+{"message":"Some issu is colaborationemail not found: Error in create collaborator","level":"error","timestamp":"2020-10-07T03:11:29.639Z"}
+{"message":"Some issu is colaborationemail not found: Error in create collaborator","level":"error","timestamp":"2020-10-07T03:12:01.751Z"}
+{"message":"Some issu is colaborationemail not found: Error in create collaborator","level":"error","timestamp":"2020-10-07T03:12:04.478Z"}
+{"message":"Some issu is colaborationemail not found: Error in create collaborator","level":"error","timestamp":"2020-10-07T03:12:10.858Z"}
+{"message":"Some issu is colaborationemail not found: Error in create collaborator","level":"error","timestamp":"2020-10-07T03:12:35.446Z"}
+{"message":"Some issu is colaborationemail not found: Error in create collaborator","level":"error","timestamp":"2020-10-07T03:12:50.962Z"}
+{"message":"Some issu is colaborationemail not found: Error in create collaborator","level":"error","timestamp":"2020-10-07T03:13:58.367Z"}
+{"message":"Something bad happendReferenceError: mail is not defined","level":"error","timestamp":"2020-10-07T03:14:13.267Z"}
+{"message":"Some issu is colaborationemail not found: Error in create collaborator","level":"error","timestamp":"2020-10-07T03:14:30.890Z"}
+{"message":"Some issu is colaboration: email not found: TypeError: Cannot read property 'id' of null","level":"error","timestamp":"2020-10-07T03:16:19.387Z"}
+{"message":"Some issu is colaboration: email not found: TypeError: Cannot read property 'id' of nullemail not found: TypeError: Cannot read property 'id' of null","level":"error","timestamp":"2020-10-07T03:16:37.086Z"}
+{"message":"Some issu is colaboration: email not found: SequelizeDatabaseError: column user.email does not existemail not found: SequelizeDatabaseError: column user.email does not exist","level":"error","timestamp":"2020-10-07T04:24:17.643Z"}
+{"message":"Some issu is colaboration: email not found: SequelizeDatabaseError: column user.email does not existemail not found: SequelizeDatabaseError: column user.email does not exist","level":"error","timestamp":"2020-10-07T04:24:55.672Z"}
+{"message":"Some issu is colaboration: email not found: SequelizeDatabaseError: column user.email does not existemail not found: SequelizeDatabaseError: column user.email does not exist","level":"error","timestamp":"2020-10-07T04:26:27.029Z"}
+{"message":"Some issu is colaboration: email not found: SequelizeDatabaseError: column user.email does not existemail not found: SequelizeDatabaseError: column user.email does not exist","level":"error","timestamp":"2020-10-07T04:27:18.942Z"}
+{"message":"Some issu is colaboration: email not found: SequelizeDatabaseError: column user.email does not existemail not found: SequelizeDatabaseError: column user.email does not exist","level":"error","timestamp":"2020-10-07T04:27:58.687Z"}
+{"message":"Some issu is colaboration: email not found: SequelizeDatabaseError: column user.email does not existemail not found: SequelizeDatabaseError: column user.email does not exist","level":"error","timestamp":"2020-10-07T04:28:22.827Z"}
+{"message":"Some issu is colaboration: email not found: SequelizeDatabaseError: column \"createdAt\" of relation \"collaborators\" does not existemail not found: SequelizeDatabaseError: column \"createdAt\" of relation \"collaborators\" does not exist","level":"error","timestamp":"2020-10-07T04:28:35.256Z"}
+{"message":"Some issu is colaboration: email not found: SequelizeDatabaseError: column \"updatedAt\" of relation \"collaborators\" does not existemail not found: SequelizeDatabaseError: column \"updatedAt\" of relation \"collaborators\" does not exist","level":"error","timestamp":"2020-10-07T04:29:30.298Z"}
+{"message":"Some issu is colaboration: email not found: SequelizeDatabaseError: null value in column \"id\" violates not-null constraintemail not found: SequelizeDatabaseError: null value in column \"id\" violates not-null constraint","level":"error","timestamp":"2020-10-07T04:29:51.715Z"}

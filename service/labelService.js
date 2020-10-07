@@ -81,4 +81,19 @@ module.exports = class Lable {
                 })
         });
     }
+
+    removeLabel(noteId) {
+        return new Promise((resolve, reject) => {
+            //console.log(bodydata.id)
+            console.log(noteId)
+            let labelId = null
+            noteModel.updateLabel(labelId, noteId)
+                .then(data => {
+                    resolve(data)
+                })
+                .catch(err => {
+                    reject('error: ' + err)
+                })
+        });
+    }
 }
