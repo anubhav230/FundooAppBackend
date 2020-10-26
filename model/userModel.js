@@ -38,7 +38,10 @@ module.exports.userModel = db.sequelize.define('user', {
  * @param {userData} userData 
  */
 module.exports.createUser = (userData) => {
+    console.log('//////from model')
+
     return new Promise((resolve, reject) => {
+        console.log(userData)
         this.userModel.create(userData)
             .then(user => {
                 resolve(user)
@@ -86,8 +89,8 @@ module.exports.mailVerification = (email) => {
  * @param {emapasswordil} password
  * @param {passToken} passToken  
  */
-module.exports.resetPasseord = (password, login_key) => {
-    return this.userModel.update({ password: password }, { where: { login_key: login_key } })
+module.exports.resetPasseord = (password, emailId) => {
+    return this.userModel.update({ password: password }, { where: { emailId: emailId } })
 }
 
 /**

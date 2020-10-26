@@ -61,7 +61,7 @@ amqplib.connect(config.amqp, (err, connection) => {
 
                     user: process.env.MAIL_ID,
                     pass: process.env.MAIL_PASS,
-                    to: process.env.MAIL,
+                    // to: process.env.MAIL,
                 };
 
                 // Send the message using the previously set up Nodemailer transport

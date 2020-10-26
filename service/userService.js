@@ -9,6 +9,7 @@ module.exports = class UserService {
      * @param {userData} userData 
      */
     registration(userData) {
+        console.log(userData)
         return new Promise((resolve, reject) => {
             let email = userData.email;
             let flag = 'registration'
@@ -18,6 +19,7 @@ module.exports = class UserService {
                 email: userData.email
             }
             const token = jwt.sign(mail, process.env.JWT_KEY, { expiresIn: '2h' })
+            console.log(userData)
             User.createUser(userData).then(data => {
                 if (data) {
                     mailer.mailer(email, token, flag)
@@ -38,6 +40,7 @@ module.exports = class UserService {
      */
     userlogin(reqbody) {
         return new Promise((resolve, reject) => {
+            console.log('/////////from login page')
             let email = reqbody.email
             let password = reqbody.password
                 // let userId = reqbody.id
@@ -81,7 +84,7 @@ module.exports = class UserService {
                         email: email
                     }
                     console.log(mail)
-                    const tokan = jwt.sign(mail, process.env.JWT_KEY, { expiresIn: 1440 })
+                    const tokan = jwt.sign(mail, process.env.JWT_KEY)
                     console.log(tokan)
                     mailer2.mailer2(email, tokan)
                     resolve(tokan)
@@ -102,9 +105,10 @@ module.exports = class UserService {
                 if (err) {
                     reject(err)
                 }
+                console.log(decoded.email)
                 const hash = User.hashPassword(password)
                 password = hash
-                User.resetPasseord(password, token)
+                User.resetPasseord(password, decoded.email)
                     .then(() => {
                         resolve('success')
                     })

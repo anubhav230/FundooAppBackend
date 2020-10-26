@@ -7,7 +7,7 @@ const db = require('../dbConfig/dbConfig');
 
 module.exports.colabModel = db.sequelize.define('collaborators', {
 
-    userId: {
+    colabId: {
         type: sequelize.INTEGER,
         allowNull: false
     },

@@ -9,7 +9,7 @@ module.exports = class NoteService {
      */
     createNote(noteData) {
         return new Promise((resolve, reject) => {
-            Lable.createNote(noteData)
+            note.createNote(noteData)
                 .then(noteData => {
                     resolve(noteData)
                 })
@@ -58,7 +58,31 @@ module.exports = class NoteService {
      */
     deleteNote(note_id) {
         return new Promise((resolve, reject) => {
+            note.updateDelete(note_id)
+                .then(data => {
+                    resolve(data)
+                })
+                .catch(err => {
+                    reject('error: ' + err)
+                })
+        });
+    }
+
+    deleteForever(note_id) {
+        return new Promise((resolve, reject) => {
             note.delete(note_id)
+                .then(data => {
+                    resolve(data)
+                })
+                .catch(err => {
+                    reject('error: ' + err)
+                })
+        });
+    }
+
+    recoverNote(note_id) {
+        return new Promise((resolve, reject) => {
+            note.recover(note_id)
                 .then(data => {
                     resolve(data)
                 })

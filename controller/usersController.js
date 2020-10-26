@@ -39,13 +39,14 @@ module.exports = class fundooController {
             const errors = validationResult(req);
 
             const data = {
-                id: req.body.id,
                 firstName: req.body.firstName,
                 lastName: req.body.lastName,
-                email: req.body.email,
+                emailId: req.body.email,
                 password: req.body.password,
             }
+
             if (errors.isEmpty()) {
+                console.log(data)
                 userService.registration(data).then(() => {
                     res.message = 'Successfully registered';
                     res.success = true;
@@ -141,6 +142,8 @@ module.exports = class fundooController {
      * @param {object} res 
      */
     resetPassword(req, res) {
+        console.log(req.body)
+        console.log('////from reset pwd cntl')
         var response = {
             'success': false,
             'message': 'Something bad happend'
@@ -151,6 +154,8 @@ module.exports = class fundooController {
                 throw new Error('undefined email')
             }
             let newPassword = req.body.password
+            console.log(req.body.password)
+            console.log(req.body.token)
             const { token } = req.body
             if (token) {
                 userService.resetPassword(newPassword, token)

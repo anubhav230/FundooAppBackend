@@ -8,7 +8,10 @@ const redis_client = redis.createClient(REDIS_PORT);
 
 module.exports.tokenVerify = (req, res, next) => {
     console.log("from tokenverify")
-    var token = req.headers['login_key'];
+        // var token = req.body['login_key'];
+    console.log(req.body)
+    let token = req.body.token;
+    console.log(token)
     if (token) {
         jwt.verify(token, process.env.JWT_LOGIN_KEY, (err, decoded) => {
             if (err) {

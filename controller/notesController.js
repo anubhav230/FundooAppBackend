@@ -17,8 +17,14 @@ module.exports = class Note {
             'success': false
         };
         console.log(req.decoded)
-            //let id = req.decoded
+
         try {
+            if (typeof req.body.title === 'undefined') {
+                response.message = "title is mendetory"
+                console.log(response)
+                res.send(response)
+            }
+
             const noteData = {
                 title: req.body.title,
                 description: req.body.description,
@@ -146,4 +152,54 @@ module.exports = class Note {
             res.send(response);
         }
     }
+    deleteForever(req, res) {
+        let response = {
+            'message': 'Something bad happend',
+            'success': false
+        };
+        try {
+            const note_id = req.body.id
+            noteService.deleteForever(note_id)
+                .then(() => {
+                    logger.info("Successsfully deleted the note");
+                    response.message = 'Successfully deleted';
+                    response.success = true;
+                    res.status(200).send(response);
+                })
+                .catch(err => {
+                    response.message = 'deletion failed. Some issue in deleting the note';
+                    logger.error(response.message + err)
+                    res.status(400).send(response);
+                })
+        } catch (error) {
+            logger.error(response.message + error);
+            res.send(response);
+        }
+    }
+
+    recoverNote(req, res) {
+        let response = {
+            'message': 'Something bad happend',
+            'success': false
+        };
+        try {
+            const note_id = req.body.id
+            noteService.recoverNote(note_id)
+                .then(() => {
+                    logger.info("Successsfully recovered");
+                    response.message = 'Successsfully recovered';
+                    response.success = true;
+                    res.status(200).send(response);
+                })
+                .catch(err => {
+                    response.message = 'deletion failed. Some issue in recovering the note';
+                    logger.error(response.message + err)
+                    res.status(400).send(response);
+                })
+        } catch (error) {
+            logger.error(response.message + error);
+            res.send(response);
+        }
+    }
+
 }
